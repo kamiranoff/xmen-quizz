@@ -22,13 +22,7 @@ class MainViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-//        
-//        do {
-//            try Auth.auth().signOut()
-//        } catch {
-//            print("error")
-//        }
-
+  
         handleAuthState = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user == nil {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -39,6 +33,14 @@ class MainViewController: UIViewController {
             }
             
         })
+    }
+    @IBAction func logoutTapped(_ sender: Any) {
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let signoutError as NSError {
+            ErrorService.printError(err: signoutError)
+        }
     }
 }
 

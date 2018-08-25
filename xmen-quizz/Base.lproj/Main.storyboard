@@ -9,17 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--X-men Quizz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="marvel_quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.23137254901960785" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YLe-g4-sF6"/>
+                    <navigationItem key="navigationItem" title="X-men Quizz" id="YLe-g4-sF6">
+                        <barButtonItem key="rightBarButtonItem" title="logout" id="J8u-z0-PHf">
+                            <color key="tintColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="QWU-YM-rOn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,54 +40,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men Quizz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjo-XE-CxX">
-                                <rect key="frame" x="16" y="80" width="343" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUd-sf-TpW">
                                 <rect key="frame" x="16" y="233.5" width="343" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOe-io-JNL" customClass="LoginVC">
-                                        <rect key="frame" x="0.0" y="66" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOe-io-JNL" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="45" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="BVx-Qf-UcX"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PwM-sz-YPS"/>
                                         </constraints>
-                                        <color key="textColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY1-kl-qTs">
-                                        <rect key="frame" x="0.0" y="106" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY1-kl-qTs" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="105" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="WgA-gC-iKq"/>
+                                            <constraint firstAttribute="height" constant="50" id="WgA-gC-iKq"/>
                                         </constraints>
-                                        <color key="textColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60F-WB-R7G">
-                                        <rect key="frame" x="127.5" y="162" width="88" height="30"/>
+                                        <rect key="frame" x="127.5" y="170" width="88" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="QoO-kt-XTW"/>
                                             <constraint firstAttribute="width" constant="88" id="Ybj-pH-8sj"/>
                                         </constraints>
-                                        <state key="normal" title="Sign in"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginBtnTapped:" destination="QNq-oP-oYE" eventType="touchUpInside" id="69R-K1-oP1"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="60F-WB-R7G" secondAttribute="bottom" constant="8" id="0cG-H6-Ien"/>
+                                    <constraint firstAttribute="bottom" secondItem="60F-WB-R7G" secondAttribute="bottom" id="0cG-H6-Ien"/>
                                     <constraint firstItem="pY1-kl-qTs" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="GjO-bu-fQc"/>
                                     <constraint firstAttribute="height" constant="200" id="IyC-t8-g8a"/>
                                     <constraint firstItem="60F-WB-R7G" firstAttribute="centerX" secondItem="ZUd-sf-TpW" secondAttribute="centerX" id="LUG-7A-LXX"/>
                                     <constraint firstItem="mOe-io-JNL" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="QVv-rF-2bP"/>
-                                    <constraint firstItem="mOe-io-JNL" firstAttribute="top" secondItem="ZUd-sf-TpW" secondAttribute="top" constant="66" id="c8a-9k-VhY"/>
+                                    <constraint firstItem="mOe-io-JNL" firstAttribute="top" secondItem="ZUd-sf-TpW" secondAttribute="top" constant="45" id="c8a-9k-VhY"/>
                                     <constraint firstAttribute="trailing" secondItem="mOe-io-JNL" secondAttribute="trailing" id="cpU-An-Riz"/>
                                     <constraint firstAttribute="trailing" secondItem="pY1-kl-qTs" secondAttribute="trailing" id="d1b-qY-v6g"/>
                                     <constraint firstItem="pY1-kl-qTs" firstAttribute="top" secondItem="mOe-io-JNL" secondAttribute="bottom" constant="10" id="m3F-Ys-k5y"/>
@@ -91,21 +94,30 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="kV6-Fn-6IS"/>
                                 </constraints>
-                                <state key="normal" title="Create account?"/>
+                                <state key="normal" title="Create account?">
+                                    <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="eqd-KO-CRQ" kind="show" id="CHC-X8-CcQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x-men-logo-quizz-cropped" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-lC-KVd">
+                                <rect key="frame" x="68" y="60" width="239" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="dOX-YL-hmq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vjo-XE-CxX" firstAttribute="leading" secondItem="42P-UY-ahF" secondAttribute="leading" constant="16" id="1gb-6H-UdK"/>
+                            <constraint firstItem="s0U-lC-KVd" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="1mV-cP-wQ6"/>
+                            <constraint firstItem="42P-UY-ahF" firstAttribute="trailing" secondItem="s0U-lC-KVd" secondAttribute="trailing" constant="68" id="9BS-Mv-6JT"/>
                             <constraint firstItem="42P-UY-ahF" firstAttribute="trailing" secondItem="ZUd-sf-TpW" secondAttribute="trailing" constant="16" id="Fb1-dk-vjL"/>
+                            <constraint firstItem="s0U-lC-KVd" firstAttribute="leading" secondItem="42P-UY-ahF" secondAttribute="leading" constant="68" id="FxA-ba-rPW"/>
                             <constraint firstItem="ZUd-sf-TpW" firstAttribute="centerY" secondItem="ej8-JI-kfo" secondAttribute="centerY" id="NTQ-Y2-TZC"/>
                             <constraint firstItem="ZUd-sf-TpW" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="OX8-t0-xkZ"/>
-                            <constraint firstItem="Vjo-XE-CxX" firstAttribute="top" secondItem="42P-UY-ahF" secondAttribute="top" constant="60" id="PVJ-H4-EUL"/>
                             <constraint firstItem="Paw-hH-BH0" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="Rfr-Qw-4jP"/>
-                            <constraint firstItem="42P-UY-ahF" firstAttribute="trailing" secondItem="Vjo-XE-CxX" secondAttribute="trailing" constant="16" id="T6V-aD-32B"/>
+                            <constraint firstItem="s0U-lC-KVd" firstAttribute="top" secondItem="42P-UY-ahF" secondAttribute="top" constant="40" id="VZg-KC-CoK"/>
                             <constraint firstItem="42P-UY-ahF" firstAttribute="bottom" secondItem="Paw-hH-BH0" secondAttribute="bottom" constant="100" id="YMq-Do-Nyg"/>
                             <constraint firstItem="ZUd-sf-TpW" firstAttribute="leading" secondItem="42P-UY-ahF" secondAttribute="leading" constant="16" id="gh5-1D-gJe"/>
                         </constraints>
@@ -131,61 +143,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-9c-h6K">
-                                <rect key="frame" x="16" y="12" width="343" height="325"/>
+                                <rect key="frame" x="16" y="12" width="343" height="414"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-nW-Hdc" customClass="LoginVC">
-                                        <rect key="frame" x="0.0" y="70" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-nW-Hdc" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="obX-1q-nSc"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="paa-CQ-cLN"/>
+                                            <constraint firstAttribute="height" constant="50" id="obX-1q-nSc"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="paa-CQ-cLN"/>
                                         </constraints>
-                                        <color key="textColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-52-sGE">
-                                        <rect key="frame" x="0.0" y="110" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-52-sGE" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Fjn-cz-fQL"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="I6x-44-go2"/>
+                                            <constraint firstAttribute="height" constant="50" id="Fjn-cz-fQL"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="I6x-44-go2"/>
                                         </constraints>
-                                        <color key="textColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2M-cM-JAP">
-                                        <rect key="frame" x="104.5" y="221" width="134" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="public username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-fO-Iej" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="190" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="134" id="FYm-rJ-fwf"/>
-                                            <constraint firstAttribute="height" constant="30" id="XSU-OH-qfG"/>
+                                            <constraint firstAttribute="height" constant="50" id="1eU-QN-NmR"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="CyT-eV-x8h"/>
                                         </constraints>
-                                        <state key="normal" title="Create Account"/>
-                                        <connections>
-                                            <action selector="createAccountTapped:" destination="eqd-KO-CRQ" eventType="touchUpInside" id="3Oa-qh-sRm"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="public username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-fO-Iej">
-                                        <rect key="frame" x="0.0" y="150" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="1eU-QN-NmR"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="CyT-eV-x8h"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-07-rWk">
-                                        <rect key="frame" x="104.5" y="287" width="134" height="30"/>
+                                        <rect key="frame" x="104.5" y="376" width="134" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="134" id="2Ss-Cd-L2w"/>
                                             <constraint firstAttribute="height" constant="30" id="VtK-JZ-g2Q"/>
                                         </constraints>
-                                        <state key="normal" title="Cancel"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cancelBtnTapped:" destination="eqd-KO-CRQ" eventType="touchUpInside" id="18N-rm-aFc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2M-cM-JAP">
+                                        <rect key="frame" x="104.5" y="280" width="134" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="134" id="FYm-rJ-fwf"/>
+                                            <constraint firstAttribute="height" constant="30" id="XSU-OH-qfG"/>
+                                        </constraints>
+                                        <state key="normal" title="Join the X-Men">
+                                            <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createAccountTapped:" destination="eqd-KO-CRQ" eventType="touchUpInside" id="3Oa-qh-sRm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -198,16 +214,16 @@
                                     <constraint firstItem="FRO-52-sGE" firstAttribute="leading" secondItem="Vhj-9c-h6K" secondAttribute="leading" id="GWa-py-hto"/>
                                     <constraint firstItem="E3E-nW-Hdc" firstAttribute="top" secondItem="Vhj-9c-h6K" secondAttribute="top" constant="70" id="H8s-fz-mTF"/>
                                     <constraint firstAttribute="trailing" secondItem="E3E-nW-Hdc" secondAttribute="trailing" id="M4d-VH-LWe"/>
-                                    <constraint firstAttribute="bottom" secondItem="S2M-cM-JAP" secondAttribute="bottom" constant="74" id="NHU-8X-9uH"/>
+                                    <constraint firstAttribute="bottom" secondItem="S2M-cM-JAP" secondAttribute="bottom" constant="104" id="NHU-8X-9uH"/>
                                     <constraint firstItem="mj0-07-rWk" firstAttribute="centerX" secondItem="Vhj-9c-h6K" secondAttribute="centerX" id="alC-2Q-Ebd"/>
                                     <constraint firstAttribute="bottom" secondItem="mj0-07-rWk" secondAttribute="bottom" constant="8" id="cgU-4C-6HE"/>
-                                    <constraint firstAttribute="height" constant="325" id="deH-YH-15O"/>
+                                    <constraint firstAttribute="height" constant="414" id="deH-YH-15O"/>
                                     <constraint firstItem="gnt-fO-Iej" firstAttribute="leading" secondItem="Vhj-9c-h6K" secondAttribute="leading" id="dyH-cj-3OO"/>
                                     <constraint firstItem="gnt-fO-Iej" firstAttribute="top" secondItem="FRO-52-sGE" secondAttribute="bottom" constant="10" id="tBX-fO-yt8"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fud-Cv-GIL" firstAttribute="trailing" secondItem="Vhj-9c-h6K" secondAttribute="trailing" constant="16" id="Chq-gV-WAN"/>
                             <constraint firstItem="Vhj-9c-h6K" firstAttribute="leading" secondItem="Fud-Cv-GIL" secondAttribute="leading" constant="16" id="Ktw-Iy-Ypj"/>
@@ -235,7 +251,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="0c5-bh-JWx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.23137254900000001" green="0.2666666667" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -247,4 +263,7 @@
             <point key="canvasLocation" x="60" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="x-men-logo-quizz-cropped" width="1000" height="604"/>
+    </resources>
 </document>

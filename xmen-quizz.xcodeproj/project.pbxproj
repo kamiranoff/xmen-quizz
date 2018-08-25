@@ -8,35 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		29E9FE38FA2D1B4045FD11BF /* Pods_marvel_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */; };
+		B967A5BD2131D782001943C9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A5BC2131D782001943C9 /* TextField.swift */; };
 		B9875A3921316B6C00CF7EF7 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3821316B6C00CF7EF7 /* CreateUserViewController.swift */; };
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
 		B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3E213176B800CF7EF7 /* ErrorService.swift */; };
 		B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A4021317E6900CF7EF7 /* FirestoreService.swift */; };
 		B98F9CA22130E5BB0012AD19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F9CA12130E5BB0012AD19 /* LoginViewController.swift */; };
+		B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */; };
 		B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7EA9E2130B19200C557C0 /* AppDelegate.swift */; };
 		B9B7EAA12130B19200C557C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7EAA02130B19200C557C0 /* MainViewController.swift */; };
 		B9B7EAA42130B19200C557C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA22130B19200C557C0 /* Main.storyboard */; };
 		B9B7EAA62130B19400C557C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA52130B19400C557C0 /* Assets.xcassets */; };
 		B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */; };
-		B9B7EAB12130B31300C557C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAB02130B31300C557C0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		897E19174AE07EA18849C334 /* Pods-marvel-quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz.release.xcconfig"; sourceTree = "<group>"; };
 		958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B967A5BC2131D782001943C9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B9875A3821316B6C00CF7EF7 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		B9875A3B213170D000CF7EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9875A3E213176B800CF7EF7 /* ErrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorService.swift; sourceTree = "<group>"; };
 		B9875A4021317E6900CF7EF7 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		B98F9CA12130E5BB0012AD19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B9B7EA9B2130B19200C557C0 /* marvel-quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B9B7EA9B2130B19200C557C0 /* xmen-quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xmen-quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B7EA9E2130B19200C557C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B7EAA02130B19200C557C0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B9B7EAA32130B19200C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9B7EAA52130B19400C557C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B7EAA82130B19400C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B9B7EAAA2130B19400C557C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9B7EAB02130B31300C557C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA8740DF83437DC0493BF336 /* Pods-marvel-quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +90,7 @@
 		B98F9C9E2130DDC60012AD19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B967A5BC2131D782001943C9 /* TextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +115,7 @@
 		B9B7EA922130B19200C557C0 = {
 			isa = PBXGroup;
 			children = (
-				B9B7EA9D2130B19200C557C0 /* marvel-quizz */,
+				B9B7EA9D2130B19200C557C0 /* xmen-quizz */,
 				B9B7EA9C2130B19200C557C0 /* Products */,
 				4FC822AEF777B4DF32D3EE4C /* Pods */,
 				93A7E1FB5D2698E6158F944F /* Frameworks */,
@@ -123,12 +125,12 @@
 		B9B7EA9C2130B19200C557C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9B7EA9B2130B19200C557C0 /* marvel-quizz.app */,
+				B9B7EA9B2130B19200C557C0 /* xmen-quizz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9B7EA9D2130B19200C557C0 /* marvel-quizz */ = {
+		B9B7EA9D2130B19200C557C0 /* xmen-quizz */ = {
 			isa = PBXGroup;
 			children = (
 				B9875A3D2131768D00CF7EF7 /* services */,
@@ -140,18 +142,17 @@
 				B9B7EAA22130B19200C557C0 /* Main.storyboard */,
 				B9B7EAA52130B19400C557C0 /* Assets.xcassets */,
 				B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */,
-				B9B7EAAA2130B19400C557C0 /* Info.plist */,
-				B9B7EAB02130B31300C557C0 /* GoogleService-Info.plist */,
+				B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */,
 			);
-			path = "marvel-quizz";
+			path = "xmen-quizz";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9B7EA9A2130B19200C557C0 /* marvel-quizz */ = {
+		B9B7EA9A2130B19200C557C0 /* xmen-quizz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9B7EAAD2130B19400C557C0 /* Build configuration list for PBXNativeTarget "marvel-quizz" */;
+			buildConfigurationList = B9B7EAAD2130B19400C557C0 /* Build configuration list for PBXNativeTarget "xmen-quizz" */;
 			buildPhases = (
 				732C700B7A982AFBA2D614B7 /* [CP] Check Pods Manifest.lock */,
 				B9B7EA972130B19200C557C0 /* Sources */,
@@ -163,9 +164,9 @@
 			);
 			dependencies = (
 			);
-			name = "marvel-quizz";
+			name = "xmen-quizz";
 			productName = "marvel-quizz";
-			productReference = B9B7EA9B2130B19200C557C0 /* marvel-quizz.app */;
+			productReference = B9B7EA9B2130B19200C557C0 /* xmen-quizz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9B7EA962130B19200C557C0 /* Build configuration list for PBXProject "marvel-quizz" */;
+			buildConfigurationList = B9B7EA962130B19200C557C0 /* Build configuration list for PBXProject "xmen-quizz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -196,7 +197,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9B7EA9A2130B19200C557C0 /* marvel-quizz */,
+				B9B7EA9A2130B19200C557C0 /* xmen-quizz */,
 			);
 		};
 /* End PBXProject section */
@@ -207,7 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */,
-				B9B7EAB12130B31300C557C0 /* GoogleService-Info.plist in Resources */,
+				B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */,
 				B9B7EAA62130B19400C557C0 /* Assets.xcassets in Resources */,
 				B9B7EAA42130B19200C557C0 /* Main.storyboard in Resources */,
 			);
@@ -280,6 +281,7 @@
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
 				B9B7EAA12130B19200C557C0 /* MainViewController.swift in Sources */,
+				B967A5BD2131D782001943C9 /* TextField.swift in Sources */,
 				B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */,
 				B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */,
 				B98F9CA22130E5BB0012AD19 /* LoginViewController.swift in Sources */,
@@ -432,12 +434,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23C3Y8VELR;
-				INFOPLIST_FILE = "marvel-quizz/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/xmen-quizz/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.marvel-quizz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.xmen-quizz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,12 +454,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23C3Y8VELR;
-				INFOPLIST_FILE = "marvel-quizz/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/xmen-quizz/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.marvel-quizz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.xmen-quizz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9B7EA962130B19200C557C0 /* Build configuration list for PBXProject "marvel-quizz" */ = {
+		B9B7EA962130B19200C557C0 /* Build configuration list for PBXProject "xmen-quizz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9B7EAAB2130B19400C557C0 /* Debug */,
@@ -475,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9B7EAAD2130B19400C557C0 /* Build configuration list for PBXNativeTarget "marvel-quizz" */ = {
+		B9B7EAAD2130B19400C557C0 /* Build configuration list for PBXNativeTarget "xmen-quizz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9B7EAAE2130B19400C557C0 /* Debug */,

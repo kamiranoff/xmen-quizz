@@ -9,4 +9,8 @@ target 'marvel-quizz' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
 end
