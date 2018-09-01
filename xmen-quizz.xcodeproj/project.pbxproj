@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29E9FE38FA2D1B4045FD11BF /* Pods_marvel_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */; };
+		8F15988FD4E48F713BB154D2 /* Pods_xmen_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */; };
 		B967A5BD2131D782001943C9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A5BC2131D782001943C9 /* TextField.swift */; };
 		B9875A3921316B6C00CF7EF7 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3821316B6C00CF7EF7 /* CreateUserViewController.swift */; };
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3667AD818CDC5AA5EA2AF61C /* Pods-xmen-quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmen-quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz.release.xcconfig"; sourceTree = "<group>"; };
+		6A0C55EEF7D6BEAFE707E774 /* Pods-xmen-quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmen-quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz.debug.xcconfig"; sourceTree = "<group>"; };
 		897E19174AE07EA18849C334 /* Pods-marvel-quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz.release.xcconfig"; sourceTree = "<group>"; };
 		958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B967A5BC2131D782001943C9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		B9B7EAA32130B19200C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9B7EAA52130B19400C557C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B7EAA82130B19400C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xmen_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8740DF83437DC0493BF336 /* Pods-marvel-quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E9FE38FA2D1B4045FD11BF /* Pods_marvel_quizz.framework in Frameworks */,
+				8F15988FD4E48F713BB154D2 /* Pods_xmen_quizz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 			children = (
 				EA8740DF83437DC0493BF336 /* Pods-marvel-quizz.debug.xcconfig */,
 				897E19174AE07EA18849C334 /* Pods-marvel-quizz.release.xcconfig */,
+				6A0C55EEF7D6BEAFE707E774 /* Pods-xmen-quizz.debug.xcconfig */,
+				3667AD818CDC5AA5EA2AF61C /* Pods-xmen-quizz.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -66,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */,
+				D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 				B9B7EA982130B19200C557C0 /* Frameworks */,
 				B9B7EA992130B19200C557C0 /* Resources */,
 				40F445627AD3F77C6BA6E4C2 /* [CP] Embed Pods Frameworks */,
+				A1B083E5646D195669016350 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,8 +232,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -237,7 +251,12 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -250,7 +269,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		732C700B7A982AFBA2D614B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -264,11 +283,29 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-marvel-quizz-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-xmen-quizz-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B083E5646D195669016350 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -362,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -417,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -429,7 +466,7 @@
 		};
 		B9B7EAAE2130B19400C557C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA8740DF83437DC0493BF336 /* Pods-marvel-quizz.debug.xcconfig */;
+			baseConfigurationReference = 6A0C55EEF7D6BEAFE707E774 /* Pods-xmen-quizz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,7 +486,7 @@
 		};
 		B9B7EAAF2130B19400C557C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 897E19174AE07EA18849C334 /* Pods-marvel-quizz.release.xcconfig */;
+			baseConfigurationReference = 3667AD818CDC5AA5EA2AF61C /* Pods-xmen-quizz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
