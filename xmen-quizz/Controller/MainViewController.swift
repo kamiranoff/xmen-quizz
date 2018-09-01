@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     
     private var handleAuthState: AuthStateDidChangeListenerHandle?
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,14 +24,19 @@ class MainViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-  
+        super.viewWillAppear(animated)
         handleAuthState = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user == nil {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-                self.present(loginViewController, animated: true, completion: nil)
+            
+//                self.present(loginViewController, animated: true, completion: nil)
             } else {
                 print(user?.displayName ?? "something is wrong")
+                if((user?.displayName) != nil) {
+                    self.welcomeLabel.text = "Welcome back, \(user!.displayName ?? "X-Man")"
+                    
+                }
             }
             
         })

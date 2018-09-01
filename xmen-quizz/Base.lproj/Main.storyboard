@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,11 +13,26 @@
         <!--X-men Quizz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="marvel_quizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="xmen_quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-WU-UhP">
+                                <rect key="frame" x="16" y="20" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="zRL-oW-h3l"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hEf-WU-UhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7WO-4S-vC5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hEf-WU-UhP" secondAttribute="trailing" constant="16" id="F1R-gN-u3A"/>
+                            <constraint firstItem="hEf-WU-UhP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xcw-kV-Lv0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="X-men Quizz" id="YLe-g4-sF6">
@@ -24,9 +40,13 @@
                             <color key="tintColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="logoutTapped:" destination="BYZ-38-t0r" id="QWU-YM-rOn"/>
+                                <segue destination="QNq-oP-oYE" kind="presentation" id="Qmz-zY-Ray"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="hEf-WU-UhP" id="J5r-9l-fMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,62 +55,13 @@
         <!--Login View Controller-->
         <scene sceneID="w8G-qv-rwK">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="QNq-oP-oYE" customClass="LoginViewController" customModule="marvel_quizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="QNq-oP-oYE" customClass="LoginViewController" customModule="xmen_quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ej8-JI-kfo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUd-sf-TpW">
-                                <rect key="frame" x="16" y="233.5" width="343" height="200"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOe-io-JNL" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="45" width="343" height="50"/>
-                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PwM-sz-YPS"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY1-kl-qTs" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="105" width="343" height="50"/>
-                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="WgA-gC-iKq"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60F-WB-R7G">
-                                        <rect key="frame" x="127.5" y="170" width="88" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="QoO-kt-XTW"/>
-                                            <constraint firstAttribute="width" constant="88" id="Ybj-pH-8sj"/>
-                                        </constraints>
-                                        <state key="normal" title="Sign in">
-                                            <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginBtnTapped:" destination="QNq-oP-oYE" eventType="touchUpInside" id="69R-K1-oP1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="60F-WB-R7G" secondAttribute="bottom" id="0cG-H6-Ien"/>
-                                    <constraint firstItem="pY1-kl-qTs" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="GjO-bu-fQc"/>
-                                    <constraint firstAttribute="height" constant="200" id="IyC-t8-g8a"/>
-                                    <constraint firstItem="60F-WB-R7G" firstAttribute="centerX" secondItem="ZUd-sf-TpW" secondAttribute="centerX" id="LUG-7A-LXX"/>
-                                    <constraint firstItem="mOe-io-JNL" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="QVv-rF-2bP"/>
-                                    <constraint firstItem="mOe-io-JNL" firstAttribute="top" secondItem="ZUd-sf-TpW" secondAttribute="top" constant="45" id="c8a-9k-VhY"/>
-                                    <constraint firstAttribute="trailing" secondItem="mOe-io-JNL" secondAttribute="trailing" id="cpU-An-Riz"/>
-                                    <constraint firstAttribute="trailing" secondItem="pY1-kl-qTs" secondAttribute="trailing" id="d1b-qY-v6g"/>
-                                    <constraint firstItem="pY1-kl-qTs" firstAttribute="top" secondItem="mOe-io-JNL" secondAttribute="bottom" constant="10" id="m3F-Ys-k5y"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-hH-BH0">
-                                <rect key="frame" x="131" y="537" width="113" height="30"/>
+                                <rect key="frame" x="131" y="617" width="113" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="kV6-Fn-6IS"/>
                                 </constraints>
@@ -107,18 +78,81 @@
                                     <constraint firstAttribute="height" constant="200" id="dOX-YL-hmq"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60F-WB-R7G">
+                                <rect key="frame" x="143.5" y="504" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QoO-kt-XTW"/>
+                                    <constraint firstAttribute="width" constant="88" id="Ybj-pH-8sj"/>
+                                </constraints>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnTapped:" destination="QNq-oP-oYE" eventType="touchUpInside" id="69R-K1-oP1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUd-sf-TpW">
+                                <rect key="frame" x="16" y="246" width="343" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOe-io-JNL" customClass="TextField" customModule="xmen_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="45" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PwM-sz-YPS"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY1-kl-qTs" customClass="TextField" customModule="xmen_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="105" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WgA-gC-iKq"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylz-lh-PUs" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="165" width="150" height="41"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="Day-0h-aCN"/>
+                                            <constraint firstAttribute="width" constant="150" id="MZ0-qS-l6c"/>
+                                            <constraint firstAttribute="height" constant="41" id="kfO-2v-Izo"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="googleSignInBtnTapped:" destination="QNq-oP-oYE" eventType="valueChanged" id="4aF-ch-XGj"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ylz-lh-PUs" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="E34-Is-jQs"/>
+                                    <constraint firstItem="pY1-kl-qTs" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="GjO-bu-fQc"/>
+                                    <constraint firstAttribute="height" constant="250" id="IyC-t8-g8a"/>
+                                    <constraint firstItem="mOe-io-JNL" firstAttribute="leading" secondItem="ZUd-sf-TpW" secondAttribute="leading" id="QVv-rF-2bP"/>
+                                    <constraint firstItem="ylz-lh-PUs" firstAttribute="top" secondItem="pY1-kl-qTs" secondAttribute="bottom" constant="10" id="Z60-Q5-pFI"/>
+                                    <constraint firstItem="mOe-io-JNL" firstAttribute="top" secondItem="ZUd-sf-TpW" secondAttribute="top" constant="45" id="c8a-9k-VhY"/>
+                                    <constraint firstAttribute="trailing" secondItem="mOe-io-JNL" secondAttribute="trailing" id="cpU-An-Riz"/>
+                                    <constraint firstAttribute="trailing" secondItem="pY1-kl-qTs" secondAttribute="trailing" id="d1b-qY-v6g"/>
+                                    <constraint firstItem="pY1-kl-qTs" firstAttribute="top" secondItem="mOe-io-JNL" secondAttribute="bottom" constant="10" id="m3F-Ys-k5y"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="s0U-lC-KVd" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="1mV-cP-wQ6"/>
                             <constraint firstItem="42P-UY-ahF" firstAttribute="trailing" secondItem="s0U-lC-KVd" secondAttribute="trailing" constant="68" id="9BS-Mv-6JT"/>
+                            <constraint firstAttribute="bottom" secondItem="60F-WB-R7G" secondAttribute="bottom" constant="133" id="DGS-YP-4FN"/>
                             <constraint firstItem="42P-UY-ahF" firstAttribute="trailing" secondItem="ZUd-sf-TpW" secondAttribute="trailing" constant="16" id="Fb1-dk-vjL"/>
                             <constraint firstItem="s0U-lC-KVd" firstAttribute="leading" secondItem="42P-UY-ahF" secondAttribute="leading" constant="68" id="FxA-ba-rPW"/>
-                            <constraint firstItem="ZUd-sf-TpW" firstAttribute="centerY" secondItem="ej8-JI-kfo" secondAttribute="centerY" id="NTQ-Y2-TZC"/>
+                            <constraint firstItem="ZUd-sf-TpW" firstAttribute="centerY" secondItem="ej8-JI-kfo" secondAttribute="centerY" constant="37.5" id="NTQ-Y2-TZC"/>
                             <constraint firstItem="ZUd-sf-TpW" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="OX8-t0-xkZ"/>
                             <constraint firstItem="Paw-hH-BH0" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="Rfr-Qw-4jP"/>
                             <constraint firstItem="s0U-lC-KVd" firstAttribute="top" secondItem="42P-UY-ahF" secondAttribute="top" constant="40" id="VZg-KC-CoK"/>
-                            <constraint firstItem="42P-UY-ahF" firstAttribute="bottom" secondItem="Paw-hH-BH0" secondAttribute="bottom" constant="100" id="YMq-Do-Nyg"/>
+                            <constraint firstItem="42P-UY-ahF" firstAttribute="bottom" secondItem="Paw-hH-BH0" secondAttribute="bottom" constant="20" id="YMq-Do-Nyg"/>
+                            <constraint firstItem="60F-WB-R7G" firstAttribute="centerX" secondItem="ej8-JI-kfo" secondAttribute="centerX" id="eFj-0a-S7r"/>
                             <constraint firstItem="ZUd-sf-TpW" firstAttribute="leading" secondItem="42P-UY-ahF" secondAttribute="leading" constant="16" id="gh5-1D-gJe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="42P-UY-ahF"/>
@@ -137,7 +171,7 @@
         <!--Create User View Controller-->
         <scene sceneID="gxv-bO-9CK">
             <objects>
-                <viewController id="eqd-KO-CRQ" customClass="CreateUserViewController" customModule="marvel_quizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eqd-KO-CRQ" customClass="CreateUserViewController" customModule="xmen_quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ke-rE-ixw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +179,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-9c-h6K">
                                 <rect key="frame" x="16" y="12" width="343" height="414"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-nW-Hdc" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-nW-Hdc" customClass="TextField" customModule="xmen_quizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -156,7 +190,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-52-sGE" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-52-sGE" customClass="TextField" customModule="xmen_quizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -167,7 +201,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="public username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-fO-Iej" customClass="TextField" customModule="marvel_quizz" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="public username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-fO-Iej" customClass="TextField" customModule="xmen_quizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="190" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
