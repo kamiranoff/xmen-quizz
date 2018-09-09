@@ -7,33 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29E9FE38FA2D1B4045FD11BF /* Pods_marvel_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */; };
-		8F15988FD4E48F713BB154D2 /* Pods_xmen_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */; };
+		B93761C5214442A400FD0D04 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C4214442A400FD0D04 /* AuthVC.swift */; };
+		B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C62144442B00FD0D04 /* LoginVC.swift */; };
+		B93761C9214445F700FD0D04 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C8214445F700FD0D04 /* AuthService.swift */; };
+		B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761CA21444F9A00FD0D04 /* DataService.swift */; };
 		B967A5BD2131D782001943C9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A5BC2131D782001943C9 /* TextField.swift */; };
-		B9875A3921316B6C00CF7EF7 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3821316B6C00CF7EF7 /* CreateUserViewController.swift */; };
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
 		B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3E213176B800CF7EF7 /* ErrorService.swift */; };
 		B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A4021317E6900CF7EF7 /* FirestoreService.swift */; };
-		B98F9CA22130E5BB0012AD19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F9CA12130E5BB0012AD19 /* LoginViewController.swift */; };
 		B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */; };
 		B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7EA9E2130B19200C557C0 /* AppDelegate.swift */; };
 		B9B7EAA12130B19200C557C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7EAA02130B19200C557C0 /* MainViewController.swift */; };
 		B9B7EAA42130B19200C557C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA22130B19200C557C0 /* Main.storyboard */; };
 		B9B7EAA62130B19400C557C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA52130B19400C557C0 /* Assets.xcassets */; };
 		B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */; };
+		B9C767D421453D3100B8BB50 /* icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9C767D321453D3100B8BB50 /* icons.ttf */; };
+		B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */; };
+		D36FEE104B9E3C708A9E0CD3 /* Pods_xmen_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3667AD818CDC5AA5EA2AF61C /* Pods-xmen-quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmen-quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz.release.xcconfig"; sourceTree = "<group>"; };
 		6A0C55EEF7D6BEAFE707E774 /* Pods-xmen-quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmen-quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz.debug.xcconfig"; sourceTree = "<group>"; };
-		897E19174AE07EA18849C334 /* Pods-marvel-quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz.release.xcconfig"; sourceTree = "<group>"; };
 		958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93761C22144204F00FD0D04 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93761C4214442A400FD0D04 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		B93761C62144442B00FD0D04 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B93761C8214445F700FD0D04 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B93761CA21444F9A00FD0D04 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B967A5BC2131D782001943C9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		B9875A3821316B6C00CF7EF7 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		B9875A3B213170D000CF7EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9875A3E213176B800CF7EF7 /* ErrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorService.swift; sourceTree = "<group>"; };
 		B9875A4021317E6900CF7EF7 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		B98F9CA12130E5BB0012AD19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9B7EA9B2130B19200C557C0 /* xmen-quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xmen-quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B7EA9E2130B19200C557C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +46,9 @@
 		B9B7EAA32130B19200C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9B7EAA52130B19400C557C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B7EAA82130B19400C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9C767D321453D3100B8BB50 /* icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.ttf; sourceTree = "<group>"; };
+		B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVC.swift; sourceTree = "<group>"; };
 		D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xmen_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA8740DF83437DC0493BF336 /* Pods-marvel-quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marvel-quizz/Pods-marvel-quizz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29E9FE38FA2D1B4045FD11BF /* Pods_marvel_quizz.framework in Frameworks */,
-				8F15988FD4E48F713BB154D2 /* Pods_xmen_quizz.framework in Frameworks */,
+				D36FEE104B9E3C708A9E0CD3 /* Pods_xmen_quizz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +66,6 @@
 		4FC822AEF777B4DF32D3EE4C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EA8740DF83437DC0493BF336 /* Pods-marvel-quizz.debug.xcconfig */,
-				897E19174AE07EA18849C334 /* Pods-marvel-quizz.release.xcconfig */,
 				6A0C55EEF7D6BEAFE707E774 /* Pods-xmen-quizz.debug.xcconfig */,
 				3667AD818CDC5AA5EA2AF61C /* Pods-xmen-quizz.release.xcconfig */,
 			);
@@ -91,6 +94,8 @@
 			children = (
 				B9875A3E213176B800CF7EF7 /* ErrorService.swift */,
 				B9875A4021317E6900CF7EF7 /* FirestoreService.swift */,
+				B93761C8214445F700FD0D04 /* AuthService.swift */,
+				B93761CA21444F9A00FD0D04 /* DataService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -107,8 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				B9B7EAA02130B19200C557C0 /* MainViewController.swift */,
-				B98F9CA12130E5BB0012AD19 /* LoginViewController.swift */,
-				B9875A3821316B6C00CF7EF7 /* CreateUserViewController.swift */,
+				B93761C4214442A400FD0D04 /* AuthVC.swift */,
+				B93761C62144442B00FD0D04 /* LoginVC.swift */,
+				B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 		B9B7EA9D2130B19200C557C0 /* xmen-quizz */ = {
 			isa = PBXGroup;
 			children = (
+				B9C767D221453D2300B8BB50 /* fonts */,
 				B9875A3D2131768D00CF7EF7 /* services */,
 				B9875A3A213170B200CF7EF7 /* Utilities */,
 				B98F9CA02130DDD30012AD19 /* Model */,
@@ -151,8 +158,17 @@
 				B9B7EAA52130B19400C557C0 /* Assets.xcassets */,
 				B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */,
 				B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */,
+				B93761C22144204F00FD0D04 /* Info.plist */,
 			);
 			path = "xmen-quizz";
+			sourceTree = "<group>";
+		};
+		B9C767D221453D2300B8BB50 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B9C767D321453D3100B8BB50 /* icons.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +234,7 @@
 			files = (
 				B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */,
 				B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */,
+				B9C767D421453D3100B8BB50 /* icons.ttf in Resources */,
 				B9B7EAA62130B19400C557C0 /* Assets.xcassets in Resources */,
 				B9B7EAA42130B19200C557C0 /* Main.storyboard in Resources */,
 			);
@@ -315,14 +332,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93761C5214442A400FD0D04 /* AuthVC.swift in Sources */,
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
+				B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */,
 				B9B7EAA12130B19200C557C0 /* MainViewController.swift in Sources */,
+				B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */,
+				B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */,
+				B93761C9214445F700FD0D04 /* AuthService.swift in Sources */,
 				B967A5BD2131D782001943C9 /* TextField.swift in Sources */,
 				B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */,
 				B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */,
-				B98F9CA22130E5BB0012AD19 /* LoginViewController.swift in Sources */,
-				B9875A3921316B6C00CF7EF7 /* CreateUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.xmen-quizz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.x-quizz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,7 +517,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.xmen-quizz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nemeantalestudios.x-quizz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

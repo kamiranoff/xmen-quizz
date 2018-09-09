@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class MainViewController: UIViewController {
     
@@ -23,15 +24,14 @@ class MainViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         handleAuthState = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user == nil {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-            
-//                self.present(loginViewController, animated: true, completion: nil)
-            } else {
+                self.present(loginViewController, animated: true, completion: nil)
+           } else {
                 print(user?.displayName ?? "something is wrong")
                 if((user?.displayName) != nil) {
                     self.welcomeLabel.text = "Welcome back, \(user!.displayName ?? "X-Man")"
@@ -41,9 +41,28 @@ class MainViewController: UIViewController {
             
         })
     }
+    
+    func logoutSocial() {
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
+        
+        for info in (user.providerData) {
+            switch info.providerID {
+            case GoogleAuthProviderID:
+                GIDSignIn.sharedInstance()?.signOut()
+            case FacebookAuthProviderID:
+                print("fb");
+            default:
+                break
+            }
+        }
+    }
+    
     @IBAction func logoutTapped(_ sender: Any) {
         
         do {
+            logoutSocial()
             try Auth.auth().signOut()
         } catch let signoutError as NSError {
             ErrorService.printError(err: signoutError)

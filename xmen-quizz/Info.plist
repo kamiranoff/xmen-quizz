@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>X-Quizz</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -23,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.504347918485-1m28tqj2hjobpjtn14c5ejj391he6n02</string>
+				<string>com.googleusercontent.apps.504347918485-sr8srmmuv5kv9rs8dkipr2kn2gdi1uuj</string>
 			</array>
 		</dict>
 	</array>

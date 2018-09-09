@@ -9,6 +9,4 @@
 import Foundation
 
 // Firebase
-let USERS_REF = "users"
-let USERNAME = "username"
-let DATE_CREATED = "dateCreated"
+
