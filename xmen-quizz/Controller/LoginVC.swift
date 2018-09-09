@@ -14,7 +14,6 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var closeBtn: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +21,6 @@ class LoginVC: UIViewController {
         closeBtn.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2.0)
         // Do any additional setup after loading the view.
     }
-    
-
-    
     
     @IBAction func loginBtnTapped(_ sender: Any) {
         if(emailTxt.text != nil && passwordTxt.text != nil) {

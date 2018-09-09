@@ -23,23 +23,12 @@ class MainViewController: UIViewController {
         FirestoreService.setup()
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        handleAuthState = Auth.auth().addStateDidChangeListener({ (auth, user) in
-            if user == nil {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-                self.present(loginViewController, animated: true, completion: nil)
-           } else {
-                print(user?.displayName ?? "something is wrong")
-                if((user?.displayName) != nil) {
-                    self.welcomeLabel.text = "Welcome back, \(user!.displayName ?? "X-Man")"
-                    
-                }
-            }
-            
-        })
+        let user = Auth.auth().currentUser;
+        if  (user != nil) {
+            self.welcomeLabel.text = "Welcome back, \(user!.displayName ?? "X-Man")"
+        }
     }
     
     func logoutSocial() {
@@ -60,13 +49,18 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
-        
-        do {
-            logoutSocial()
-            try Auth.auth().signOut()
-        } catch let signoutError as NSError {
-            ErrorService.printError(err: signoutError)
+        let logoutPopup = UIAlertController(title: "Logout?", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
+        let logoutAction = UIAlertAction(title: "Logout?", style: .destructive) { (buttonTapped) in
+            do {
+                try Auth.auth().signOut()
+                let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthVC") as? AuthVC
+                self.present(authVC!, animated: true, completion: nil)
+            } catch {
+                print(error)
+            }
         }
+        logoutPopup.addAction(logoutAction)
+        present(logoutPopup, animated: true, completion: nil)
     }
 }
 

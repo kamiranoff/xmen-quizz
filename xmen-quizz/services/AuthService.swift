@@ -45,5 +45,11 @@ class AuthService {
         
     }
     
+    func getCurrentUser() -> User? {
+        return Auth.auth().currentUser;
+    }
+    
+    
+    
     
 }
