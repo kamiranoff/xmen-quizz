@@ -45,6 +45,17 @@ class AuthService {
         
     }
     
+    func loginUser(withCredential credential: AuthCredential, loginComplete: @escaping (_ status: Bool,_ error: Error?) -> ()) {
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                ErrorService.printError(err: error)
+                loginComplete(false, error)
+                return
+            }
+            loginComplete(true, nil)
+        }
+    }
+    
     func getCurrentUser() -> User? {
         return Auth.auth().currentUser;
     }

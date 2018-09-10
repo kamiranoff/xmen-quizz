@@ -8,11 +8,14 @@
 
 import UIKit
 import GoogleSignIn
-class AuthVC: UIViewController {
+import Firebase
+
+
+class AuthVC: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        GIDSignIn.sharedInstance()?.uiDelegate = self;
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -21,9 +24,20 @@ class AuthVC: UIViewController {
             dismiss(animated: true, completion: nil)
         }
     }
+    
+    func firebaseLogin(_ credential: AuthCredential ) {
+        AuthService.instance.loginUser(withCredential: credential) { (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                ErrorService.printError(err: error!)
+            }
+        }
+    }
+    
 
     @IBAction func googleSignInBtnTapped(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
+      //  GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func signInWithEmailPressed(_ sender: Any) {
@@ -36,4 +50,6 @@ class AuthVC: UIViewController {
         let registerUserVC = storyboard?.instantiateViewController(withIdentifier: "RegisterUserVC")
         present(registerUserVC!, animated: true, completion: nil)
     }
+    
+    
 }
