@@ -21,8 +21,13 @@
 		B9B7EAA42130B19200C557C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA22130B19200C557C0 /* Main.storyboard */; };
 		B9B7EAA62130B19400C557C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA52130B19400C557C0 /* Assets.xcassets */; };
 		B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */; };
+		B9C17E462149CEFD0081088D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C17E452149CEFD0081088D /* Card.swift */; };
+		B9C17E482149D3A20081088D /* Quizz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C17E472149D3A20081088D /* Quizz.swift */; };
+		B9C17E4A2149D5F70081088D /* QuizzService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C17E492149D5F70081088D /* QuizzService.swift */; };
 		B9C767D421453D3100B8BB50 /* icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9C767D321453D3100B8BB50 /* icons.ttf */; };
 		B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */; };
+		B9D8AC6C2149B51F0005B3A8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */; };
+		B9D8AC6E2149BD8D0005B3A8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8AC6D2149BD8D0005B3A8 /* Button.swift */; };
 		D36FEE104B9E3C708A9E0CD3 /* Pods_xmen_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +51,13 @@
 		B9B7EAA32130B19200C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9B7EAA52130B19400C557C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B7EAA82130B19400C557C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9C17E452149CEFD0081088D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B9C17E472149D3A20081088D /* Quizz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Quizz.swift; path = "xmen-quizz/View/Quizz.swift"; sourceTree = SOURCE_ROOT; };
+		B9C17E492149D5F70081088D /* QuizzService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzService.swift; sourceTree = "<group>"; };
 		B9C767D321453D3100B8BB50 /* icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.ttf; sourceTree = "<group>"; };
 		B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVC.swift; sourceTree = "<group>"; };
+		B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B9D8AC6D2149BD8D0005B3A8 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xmen_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +106,7 @@
 				B9875A4021317E6900CF7EF7 /* FirestoreService.swift */,
 				B93761C8214445F700FD0D04 /* AuthService.swift */,
 				B93761CA21444F9A00FD0D04 /* DataService.swift */,
+				B9C17E492149D5F70081088D /* QuizzService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -104,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				B967A5BC2131D782001943C9 /* TextField.swift */,
+				B9D8AC6D2149BD8D0005B3A8 /* Button.swift */,
+				B9C17E452149CEFD0081088D /* Card.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 				B93761C4214442A400FD0D04 /* AuthVC.swift */,
 				B93761C62144442B00FD0D04 /* LoginVC.swift */,
 				B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */,
+				B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +136,7 @@
 		B98F9CA02130DDD30012AD19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B9C17E472149D3A20081088D /* Quizz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +162,7 @@
 		B9B7EA9D2130B19200C557C0 /* xmen-quizz */ = {
 			isa = PBXGroup;
 			children = (
+				B9C17E442149CD400081088D /* storyboards */,
 				B9C767D221453D2300B8BB50 /* fonts */,
 				B9875A3D2131768D00CF7EF7 /* services */,
 				B9875A3A213170B200CF7EF7 /* Utilities */,
@@ -154,13 +170,20 @@
 				B98F9C9F2130DDCE0012AD19 /* Controller */,
 				B98F9C9E2130DDC60012AD19 /* View */,
 				B9B7EA9E2130B19200C557C0 /* AppDelegate.swift */,
-				B9B7EAA22130B19200C557C0 /* Main.storyboard */,
 				B9B7EAA52130B19400C557C0 /* Assets.xcassets */,
-				B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */,
 				B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */,
 				B93761C22144204F00FD0D04 /* Info.plist */,
 			);
 			path = "xmen-quizz";
+			sourceTree = "<group>";
+		};
+		B9C17E442149CD400081088D /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B9B7EAA22130B19200C557C0 /* Main.storyboard */,
+				B9B7EAA72130B19400C557C0 /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
 			sourceTree = "<group>";
 		};
 		B9C767D221453D2300B8BB50 /* fonts */ = {
@@ -333,15 +356,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93761C5214442A400FD0D04 /* AuthVC.swift in Sources */,
+				B9C17E4A2149D5F70081088D /* QuizzService.swift in Sources */,
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
 				B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */,
+				B9C17E482149D3A20081088D /* Quizz.swift in Sources */,
 				B9B7EAA12130B19200C557C0 /* MainViewController.swift in Sources */,
+				B9D8AC6C2149B51F0005B3A8 /* SettingsVC.swift in Sources */,
 				B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */,
 				B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */,
 				B93761C9214445F700FD0D04 /* AuthService.swift in Sources */,
+				B9C17E462149CEFD0081088D /* Card.swift in Sources */,
 				B967A5BD2131D782001943C9 /* TextField.swift in Sources */,
 				B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */,
+				B9D8AC6E2149BD8D0005B3A8 /* Button.swift in Sources */,
 				B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

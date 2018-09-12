@@ -15,12 +15,23 @@ class MainViewController: UIViewController {
     private var handleAuthState: AuthStateDidChangeListenerHandle?
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var settingLabel: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         FirestoreService.setup()
+        
+        settingLabel.title = "\u{EA30}"
+       
+        for controlState in [UIControl.State.normal, UIControl.State.disabled, UIControl.State.focused, UIControl.State.highlighted, UIControl.State.selected] {
+            settingLabel.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "icons", size: 24)!,
+                ], for: controlState)
+
+        }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,39 +40,6 @@ class MainViewController: UIViewController {
         if  (user != nil) {
             self.welcomeLabel.text = "Welcome back, \(user!.displayName ?? "X-Man")"
         }
-    }
-    
-    func logoutSocial() {
-        guard let user = Auth.auth().currentUser else {
-            return
-        }
-        
-        for info in (user.providerData) {
-            switch info.providerID {
-            case GoogleAuthProviderID:
-                GIDSignIn.sharedInstance()?.signOut()
-            case FacebookAuthProviderID:
-                print("fb");
-            default:
-                break
-            }
-        }
-    }
-    
-    @IBAction func logoutTapped(_ sender: Any) {
-        let logoutPopup = UIAlertController(title: "Logout?", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "Logout?", style: .destructive) { (buttonTapped) in
-            do {
-                try Auth.auth().signOut()
-                GIDSignIn.sharedInstance().signOut()
-                let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthVC") as? AuthVC
-                self.present(authVC!, animated: true, completion: nil)
-            } catch {
-                print(error)
-            }
-        }
-        logoutPopup.addAction(logoutAction)
-        present(logoutPopup, animated: true, completion: nil)
     }
 }
 

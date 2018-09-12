@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kOs-GQ-EFC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kOs-GQ-EFC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,34 +28,139 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="zRL-oW-h3l"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eum-dy-K1F">
+                                <rect key="frame" x="0.0" y="60" width="375" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="254" id="u5O-gN-Xwk" customClass="Card" customModule="xmen_quizz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="254"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u5O-gN-Xwk" id="72P-n2-BNf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="253.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4R-GF-XB2">
+                                                    <rect key="frame" x="15" y="11" width="345" height="232"/>
+                                                    <color key="backgroundColor" red="0.60392156860000001" green="0.71764705880000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="FjG-XN-Tsq"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="c4R-GF-XB2" firstAttribute="top" secondItem="72P-n2-BNf" secondAttribute="topMargin" id="0eG-m5-NzP"/>
+                                                <constraint firstItem="c4R-GF-XB2" firstAttribute="trailing" secondItem="72P-n2-BNf" secondAttribute="trailingMargin" id="Dfq-8c-GfB"/>
+                                                <constraint firstItem="c4R-GF-XB2" firstAttribute="bottom" secondItem="72P-n2-BNf" secondAttribute="bottomMargin" id="WbU-LH-q1Y"/>
+                                                <constraint firstItem="c4R-GF-XB2" firstAttribute="leading" secondItem="72P-n2-BNf" secondAttribute="leadingMargin" id="qMz-YM-Vjd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eum-dy-K1F" firstAttribute="top" secondItem="hEf-WU-UhP" secondAttribute="bottom" constant="8" id="5ZA-vB-BEG"/>
                             <constraint firstItem="hEf-WU-UhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7WO-4S-vC5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hEf-WU-UhP" secondAttribute="trailing" constant="16" id="F1R-gN-u3A"/>
+                            <constraint firstItem="eum-dy-K1F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="by6-BF-bpr"/>
+                            <constraint firstItem="eum-dy-K1F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gNO-20-MqQ"/>
+                            <constraint firstItem="eum-dy-K1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tKz-91-MBg"/>
                             <constraint firstItem="hEf-WU-UhP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xcw-kV-Lv0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="X-Quizz" id="YLe-g4-sF6">
-                        <barButtonItem key="rightBarButtonItem" title="logout" id="J8u-z0-PHf">
-                            <color key="tintColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="QWU-YM-rOn"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="J8u-z0-PHf">
+                                <color key="tintColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="BYZ-38-t0r" id="QWU-YM-rOn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="HCO-2Y-lTa">
+                                <connections>
+                                    <segue destination="DOV-0o-93i" kind="show" id="R8A-kV-x56"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="settingLabel" destination="HCO-2Y-lTa" id="IJ8-xL-6u2"/>
                         <outlet property="welcomeLabel" destination="hEf-WU-UhP" id="J5r-9l-fMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="-183"/>
+            <point key="canvasLocation" x="8.8000000000000007" y="-104.7976011994003"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="HTz-C5-Cko">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" id="DOV-0o-93i" customClass="SettingsVC" customModule="xmen_quizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHp-Mb-U3N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="superheroes" translatesAutoresizingMaskIntoConstraints="NO" id="j4H-Um-a75">
+                                <rect key="frame" x="87.5" y="70" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Uoo-HN-lzw"/>
+                                    <constraint firstAttribute="width" constant="200" id="k3R-eJ-Bvp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPq-cZ-v25" customClass="Button" customModule="xmen_quizz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="350" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="o24-H9-emW"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="DOV-0o-93i" eventType="touchUpInside" id="6UE-Qb-Izs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYQ-j9-aDd" customClass="Button" customModule="xmen_quizz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="402" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="QtR-om-0EP"/>
+                                    <constraint firstAttribute="height" constant="50" id="zbe-df-MqB"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="DOV-0o-93i" eventType="touchUpInside" id="ogp-r3-BhB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cYQ-j9-aDd" firstAttribute="top" secondItem="RPq-cZ-v25" secondAttribute="bottom" constant="2" id="0x8-Mv-cHX"/>
+                            <constraint firstItem="RPq-cZ-v25" firstAttribute="top" secondItem="j4H-Um-a75" secondAttribute="bottom" constant="80" id="142-A0-gVV"/>
+                            <constraint firstItem="RPq-cZ-v25" firstAttribute="trailing" secondItem="nrZ-uu-0bu" secondAttribute="trailing" id="5p9-bY-9ne"/>
+                            <constraint firstItem="cYQ-j9-aDd" firstAttribute="leading" secondItem="nrZ-uu-0bu" secondAttribute="leading" id="EWG-Ad-z6v"/>
+                            <constraint firstItem="j4H-Um-a75" firstAttribute="top" secondItem="nrZ-uu-0bu" secondAttribute="top" constant="70" id="eCw-ak-1lx"/>
+                            <constraint firstItem="RPq-cZ-v25" firstAttribute="leading" secondItem="nrZ-uu-0bu" secondAttribute="leading" id="fCO-VZ-ztk"/>
+                            <constraint firstItem="j4H-Um-a75" firstAttribute="centerX" secondItem="ZHp-Mb-U3N" secondAttribute="centerX" id="g0d-BO-voU"/>
+                            <constraint firstItem="cYQ-j9-aDd" firstAttribute="trailing" secondItem="nrZ-uu-0bu" secondAttribute="trailing" id="qnQ-f8-UAB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nrZ-uu-0bu"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatar" destination="j4H-Um-a75" id="A1p-KE-b7q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXj-Ag-Pnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="-855"/>
         </scene>
         <!--AuthVC-->
         <scene sceneID="w8G-qv-rwK">
@@ -99,7 +204,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8Dw-Un-n5a"/>
                                     <constraint firstAttribute="height" constant="30" id="Czv-Hg-NNd"/>
-                                    <constraint firstAttribute="width" constant="163" id="Q6X-kM-QZ8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="Q6X-kM-QZ8"/>
                                 </constraints>
                                 <state key="normal" title="Sign in with Email">
                                     <color key="titleColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -332,6 +437,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="superheroes" width="512" height="455"/>
         <image name="x-men-logo-quizz-cropped" width="1000" height="604"/>
     </resources>
     <color key="tintColor" red="0.039215686270000001" green="0.50588235290000005" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
