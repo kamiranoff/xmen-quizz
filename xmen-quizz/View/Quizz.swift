@@ -12,16 +12,18 @@ struct Quizz {
     private (set) var title:String
     private (set) var difficulty:Int
     private (set) var imageName:String?
+    private (set) var questions: [Question]
     
-    
-    init(title: String, difficulty: Int) {
+    init(title: String, difficulty: Int, questions: [Question]) {
         self.title = title
         self.difficulty = difficulty
+        self.questions = questions
     }
     
-    init(title: String, difficulty: Int, imageName: String) {
+    init(title: String, difficulty: Int, imageName: String, questions: [Question]) {
         self.title = title
         self.difficulty = difficulty
         self.imageName = imageName
+        self.questions = questions
     }
 }
