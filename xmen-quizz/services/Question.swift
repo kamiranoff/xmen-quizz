@@ -28,7 +28,7 @@ struct Option {
 }
 
 struct Question {
-    private let question: String
+    private (set) var question: String
     private var pictureUrl: String?
     private let answer: Int
     private let options: [Option]

@@ -11,6 +11,10 @@
 		B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C62144442B00FD0D04 /* LoginVC.swift */; };
 		B93761C9214445F700FD0D04 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C8214445F700FD0D04 /* AuthService.swift */; };
 		B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761CA21444F9A00FD0D04 /* DataService.swift */; };
+		B958AD33214EFC31000E285F /* QuizzVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958AD32214EFC31000E285F /* QuizzVC.swift */; };
+		B95D13EB214D5FB4004CBE89 /* QuizzTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D13EA214D5FB4004CBE89 /* QuizzTableHeader.swift */; };
+		B95D13EF214E6B67004CBE89 /* QuizzTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D13EE214E6B67004CBE89 /* QuizzTableVC.swift */; };
+		B95D13F1214E760F004CBE89 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D13F0214E760F004CBE89 /* ShadowView.swift */; };
 		B967A5BD2131D782001943C9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A5BC2131D782001943C9 /* TextField.swift */; };
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
 		B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3E213176B800CF7EF7 /* ErrorService.swift */; };
@@ -41,6 +45,10 @@
 		B93761C62144442B00FD0D04 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B93761C8214445F700FD0D04 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B93761CA21444F9A00FD0D04 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B958AD32214EFC31000E285F /* QuizzVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzVC.swift; sourceTree = "<group>"; };
+		B95D13EA214D5FB4004CBE89 /* QuizzTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzTableHeader.swift; sourceTree = "<group>"; };
+		B95D13EE214E6B67004CBE89 /* QuizzTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzTableVC.swift; sourceTree = "<group>"; };
+		B95D13F0214E760F004CBE89 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		B967A5BC2131D782001943C9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B9875A3B213170D000CF7EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9875A3E213176B800CF7EF7 /* ErrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorService.swift; sourceTree = "<group>"; };
@@ -119,6 +127,8 @@
 				B967A5BC2131D782001943C9 /* TextField.swift */,
 				B9D8AC6D2149BD8D0005B3A8 /* Button.swift */,
 				B9C17E452149CEFD0081088D /* QuizzCell.swift */,
+				B95D13EA214D5FB4004CBE89 /* QuizzTableHeader.swift */,
+				B95D13F0214E760F004CBE89 /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +141,8 @@
 				B93761C62144442B00FD0D04 /* LoginVC.swift */,
 				B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */,
 				B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */,
+				B95D13EE214E6B67004CBE89 /* QuizzTableVC.swift */,
+				B958AD32214EFC31000E285F /* QuizzVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,9 +370,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B958AD33214EFC31000E285F /* QuizzVC.swift in Sources */,
 				B93761C5214442A400FD0D04 /* AuthVC.swift in Sources */,
+				B95D13EB214D5FB4004CBE89 /* QuizzTableHeader.swift in Sources */,
 				B9C17E4A2149D5F70081088D /* QuizzService.swift in Sources */,
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
+				B95D13F1214E760F004CBE89 /* ShadowView.swift in Sources */,
 				B9B08610214ADDD000E90E82 /* Question.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
 				B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */,
@@ -370,6 +385,7 @@
 				B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */,
 				B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */,
 				B93761C9214445F700FD0D04 /* AuthService.swift in Sources */,
+				B95D13EF214E6B67004CBE89 /* QuizzTableVC.swift in Sources */,
 				B9C17E462149CEFD0081088D /* QuizzCell.swift in Sources */,
 				B967A5BD2131D782001943C9 /* TextField.swift in Sources */,
 				B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */,

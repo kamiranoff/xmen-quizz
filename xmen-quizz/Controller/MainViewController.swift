@@ -9,11 +9,12 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class MainViewController: UIViewController  {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var settingLabel: UIBarButtonItem!
-    @IBOutlet weak var quizzTable: UITableView!
+    
+    var quizzTable:QuizzTableVC?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 NSAttributedString.Key.font : UIFont(name: "icons", size: 24)!,
                 ], for: controlState)
         }
-        
-        quizzTable.delegate = self
-        quizzTable.dataSource = self
-        quizzTable.separatorColor = UIColor.clear
 
     }
     
@@ -42,36 +39,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.welcomeLabel.text = "Welcome back, \(user!.displayName ?? "X-Man")"
         }
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return QuizzService.instance.getQuizzes().count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let Cell = tableView.dequeueReusableCell(withIdentifier: "QuizzCell") as? QuizzCell {
-            let quizz = QuizzService.instance.getQuizzes()[indexPath.row]
-            Cell.updateViews(quizz: quizz)
-            
-            return Cell
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let QuizzVC = segue.destination as? QuizzVC {
+            QuizzVC.quizz = sender as? Quizz
         }
-        
-        return QuizzCell()
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor.clear
-
-    }
-    
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-//    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView:UIView =  UIView()
-//        headerView.backgroundColor = UIColor.red
-//        return headerView
-//    }
-
 }
 

@@ -21,7 +21,7 @@ class QuizzCell: UITableViewCell {
         
         backgroundVIew.backgroundColor = UIColor(red: 10.0/255, green: 129.0/255, blue: 183.0/255, alpha: 1.0)
         backgroundVIew.layer.cornerRadius = 8
-
+    
     }
 
     func updateViews(quizz: Quizz) {

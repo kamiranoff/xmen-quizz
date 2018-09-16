@@ -14,7 +14,7 @@ let options3 = [Option(option: "Magneto", id: 1), Option(option: "Jean Grey", id
 let options4 = [Option(option: "Spider-man # 3", id: 1), Option(option: "X-Force # 5", id: 2), Option(option: "X-Men # 12", id: 3), Option(option: "Avengers # 2", id: 4)]
 
 private let questions1 = [
-    Question(question: "What is Wolverine real name", answer: 1, options: options1),
+    Question(question: "What is Wolverine real name?", answer: 1, options: options1),
     Question(question: "Who was not one of the first X-Men?", answer: 2, options: options2),
     Question(question: "Sabretooth's archenemy is:", answer: 3, options: options3),
     Question(question: "Juggernaut first appeared in:", answer: 3, options: options4)
