@@ -103,6 +103,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.6.0)
+  - ViewAnimator (2.1.2)
 
 DEPENDENCIES:
   - FBSDKCoreKit (= 4.35)
@@ -112,6 +113,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - GoogleSignIn (= 4.2.0)
+  - ViewAnimator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -137,6 +139,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -161,7 +164,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
+  ViewAnimator: 20df9a24a076c6ee78b77a4dbf1943808c94954e
 
-PODFILE CHECKSUM: 263c407eadefa1a91dd054690d36c64df5d3b41d
+PODFILE CHECKSUM: f0bb985416999122f3f9fc681b18074d3baad76c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

@@ -18,8 +18,8 @@ import Foundation
 //answer: Number,
 
 struct Option {
-    private let option: String
-    private let id: Int
+    private (set) var option: String
+    private (set) var id: Int
 
     init(option: String, id: Int) {
         self.option = option
@@ -29,9 +29,9 @@ struct Option {
 
 struct Question {
     private (set) var question: String
-    private var pictureUrl: String?
-    private let answer: Int
-    private let options: [Option]
+    private (set) var pictureUrl: String?
+    private (set) var answer: Int
+    private (set) var options: [Option]
     
     
     init(question: String, answer:Int, options: [Option]) {

@@ -13,5 +13,6 @@ target 'xmen-quizz' do
   pod 'FBSDKCoreKit', '4.35'
   pod 'FBSDKLoginKit', '4.35'
   pod 'FBSDKShareKit', '4.35'
+  pod "ViewAnimator"
 
 end

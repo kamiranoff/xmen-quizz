@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91FBFF9215469EA00B86F38 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBFF8215469EA00B86F38 /* QuestionCell.swift */; };
 		B93761C5214442A400FD0D04 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C4214442A400FD0D04 /* AuthVC.swift */; };
 		B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C62144442B00FD0D04 /* LoginVC.swift */; };
 		B93761C9214445F700FD0D04 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93761C8214445F700FD0D04 /* AuthService.swift */; };
@@ -40,6 +41,7 @@
 		3667AD818CDC5AA5EA2AF61C /* Pods-xmen-quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmen-quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz.release.xcconfig"; sourceTree = "<group>"; };
 		6A0C55EEF7D6BEAFE707E774 /* Pods-xmen-quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmen-quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz.debug.xcconfig"; sourceTree = "<group>"; };
 		958C3DFE820B0AC94DCFF7C2 /* Pods_marvel_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B91FBFF8215469EA00B86F38 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		B93761C22144204F00FD0D04 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B93761C4214442A400FD0D04 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		B93761C62144442B00FD0D04 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				B9C17E452149CEFD0081088D /* QuizzCell.swift */,
 				B95D13EA214D5FB4004CBE89 /* QuizzTableHeader.swift */,
 				B95D13F0214E760F004CBE89 /* ShadowView.swift */,
+				B91FBFF8215469EA00B86F38 /* QuestionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,7 +290,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -297,6 +300,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -315,6 +319,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -324,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		732C700B7A982AFBA2D614B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -351,7 +356,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -360,7 +365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xmen-quizz/Pods-xmen-quizz-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -377,6 +382,7 @@
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
 				B95D13F1214E760F004CBE89 /* ShadowView.swift in Sources */,
 				B9B08610214ADDD000E90E82 /* Question.swift in Sources */,
+				B91FBFF9215469EA00B86F38 /* QuestionCell.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
 				B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */,
 				B9C17E482149D3A20081088D /* Quizz.swift in Sources */,

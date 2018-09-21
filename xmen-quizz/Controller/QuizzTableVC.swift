@@ -12,6 +12,7 @@ class QuizzTableVC: UITableViewController {
 
     var image: UIImage?
     let quizzes = QuizzService.instance.getQuizzes()
+
     @IBOutlet weak var quizzTable: UITableView!
 
     private let tableHeaderViewHeight: CGFloat = 300.0
@@ -88,11 +89,11 @@ extension QuizzTableVC {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let Cell = tableView.dequeueReusableCell(withIdentifier: "QuizzCell") as? QuizzCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "QuizzCell") as? QuizzCell {
             let quizz = QuizzService.instance.getQuizzes()[indexPath.row]
-            Cell.updateViews(quizz: quizz)
+            cell.updateViews(quizz: quizz)
             
-            return Cell
+            return cell
         }
         
         return QuizzCell()
@@ -100,6 +101,7 @@ extension QuizzTableVC {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
+        
         
     }
     
