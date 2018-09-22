@@ -101,19 +101,7 @@ extension QuizzTableVC {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
-        
-        
     }
-    
-//    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-//        return false
-//    }
-    //
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        let headerView:UIView =  UIView()
-    //        headerView.backgroundColor = UIColor.red
-    //        return headerView
-    //    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let quizz = QuizzService.instance.getQuizzes()[indexPath.row]

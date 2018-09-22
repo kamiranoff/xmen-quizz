@@ -20,6 +20,8 @@
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
 		B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3E213176B800CF7EF7 /* ErrorService.swift */; };
 		B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A4021317E6900CF7EF7 /* FirestoreService.swift */; };
+		B9A6F690215671510063D05A /* SRCountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A6F68F215671510063D05A /* SRCountdownTimer.swift */; };
+		B9A6F693215672C70063D05A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A6F692215672C70063D05A /* Theme.swift */; };
 		B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */; };
 		B9B08610214ADDD000E90E82 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0860F214ADDD000E90E82 /* Question.swift */; };
 		B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7EA9E2130B19200C557C0 /* AppDelegate.swift */; };
@@ -55,6 +57,8 @@
 		B9875A3B213170D000CF7EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9875A3E213176B800CF7EF7 /* ErrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorService.swift; sourceTree = "<group>"; };
 		B9875A4021317E6900CF7EF7 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		B9A6F68F215671510063D05A /* SRCountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRCountdownTimer.swift; sourceTree = "<group>"; };
+		B9A6F692215672C70063D05A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9B0860F214ADDD000E90E82 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Question.swift; path = "xmen-quizz/services/Question.swift"; sourceTree = SOURCE_ROOT; };
 		B9B7EA9B2130B19200C557C0 /* xmen-quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xmen-quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B9A6F68E215671390063D05A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				B9A6F68F215671510063D05A /* SRCountdownTimer.swift */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		B9A6F691215672B60063D05A /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				B9A6F692215672C70063D05A /* Theme.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
 		B9B7EA922130B19200C557C0 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +200,8 @@
 		B9B7EA9D2130B19200C557C0 /* xmen-quizz */ = {
 			isa = PBXGroup;
 			children = (
+				B9A6F691215672B60063D05A /* constants */,
+				B9A6F68E215671390063D05A /* libs */,
 				B9C17E442149CD400081088D /* storyboards */,
 				B9C767D221453D2300B8BB50 /* fonts */,
 				B9875A3D2131768D00CF7EF7 /* services */,
@@ -382,7 +404,9 @@
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
 				B95D13F1214E760F004CBE89 /* ShadowView.swift in Sources */,
 				B9B08610214ADDD000E90E82 /* Question.swift in Sources */,
+				B9A6F690215671510063D05A /* SRCountdownTimer.swift in Sources */,
 				B91FBFF9215469EA00B86F38 /* QuestionCell.swift in Sources */,
+				B9A6F693215672C70063D05A /* Theme.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
 				B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */,
 				B9C17E482149D3A20081088D /* Quizz.swift in Sources */,

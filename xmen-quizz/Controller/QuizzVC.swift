@@ -9,59 +9,84 @@
 import UIKit
 import ViewAnimator
 
-class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRCountdownTimerDelegate {
+    
     @IBOutlet weak var questionTitle: UILabel!
     @IBOutlet weak var quizzTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet var counter: SRCountdownTimer? = SRCountdownTimer()
+    
+    var questionIndex: Int = 0;
+    let timerTime:Int = 15;
+    
     let animations = [AnimationType.from(direction: .right, offset: 30.0)]
-
+    
     var quizz:Quizz!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         
         // Do any additional setup after loading the view.
-        initQuizz()
+        updateQuizzContent(index: questionIndex)
         tableView.delegate = self;
         tableView.dataSource = self;
+        counter?.delegate = self
+        counter?.lineColor = Theme.XMen4
+        counter?.lineWidth = 2.0
+        counter?.trailLineColor = Theme.XMen
+        
+        
     }
     
     
-    func initQuizz() {
-        quizzTitle.text = quizz.title
-        questionTitle.text = quizz.questions[0].question
-    }
-    
-    @objc func buttonAction(sender: UIButton!) {
-        print("Button tapped")
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let quizz = quizz {
-            return quizz.questions.count
+    func timerDidEnd() {
+        print("End")
+        questionIndex = questionIndex + 1
+        
+        if(questionIndex <= quizz.questions.count) {
+            updateQuizzContent(index: questionIndex)
         }
+    }
+    
+    
+    func updateQuizzContent(index:Int) {
+        tableView.reloadData()
+        quizzTitle.text = quizz.title
+        questionTitle.text = quizz.questions[index].question
+        counter?.start(beginingValue: timerTime)
+
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return quizz.questions.count
         
-        
-        return 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell") as? QuestionCell {
             let index = indexPath.row
-            if let quizz = quizz {
-                let option = quizz.questions[0].options[index].option;
-                cell.button.setTitle(option, for: .normal);
-                let delay = Double(index) * 0.075
-                cell.animate(animations: animations,delay: delay)
-                return cell;
-            }
+            let option = quizz.questions[questionIndex].options[index].option;
+            cell.optionLbl.text = option;
+            let delay = Double(index) * 0.075
+            cell.animate(animations: animations,delay: delay)
+            return cell;
         }
-    
+        
         return QuestionCell()
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let optionId = quizz.questions[questionIndex].options[index].id;
+        if(optionId == quizz.questions[questionIndex].answer) {
+            print("Well Done")
+        } else {
+            print("Wrong!")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
+    
 }
