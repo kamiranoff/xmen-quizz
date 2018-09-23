@@ -17,7 +17,7 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
     @IBOutlet var counter: SRCountdownTimer? = SRCountdownTimer()
     
     var questionIndex: Int = 0;
-    let timerTime:Int = 15;
+    let timerTime:Int = 2;
     
     let animations = [AnimationType.from(direction: .right, offset: 30.0)]
     
@@ -26,40 +26,32 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         updateQuizzContent(index: questionIndex)
+        
         tableView.delegate = self;
         tableView.dataSource = self;
         counter?.delegate = self
         counter?.lineColor = Theme.XMen4
         counter?.lineWidth = 2.0
         counter?.trailLineColor = Theme.XMen
-        
-        
     }
     
-    
     func timerDidEnd() {
-        print("End")
-        questionIndex = questionIndex + 1
-        
-        if(questionIndex <= quizz.questions.count) {
+        if(questionIndex < quizz.questions.count - 1) {
+            questionIndex = questionIndex + 1
             updateQuizzContent(index: questionIndex)
         }
     }
-    
     
     func updateQuizzContent(index:Int) {
         tableView.reloadData()
         quizzTitle.text = quizz.title
         questionTitle.text = quizz.questions[index].question
         counter?.start(beginingValue: timerTime)
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quizz.questions.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,13 +63,21 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
             cell.animate(animations: animations,delay: delay)
             return cell;
         }
-        
         return QuestionCell()
+    }
+    
+    func didSelectectRightAnswer() {
+        
+    }
+    
+    func didSelectectWrongAnswer() {
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         let optionId = quizz.questions[questionIndex].options[index].id;
+        
         if(optionId == quizz.questions[questionIndex].answer) {
             print("Well Done")
         } else {

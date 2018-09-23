@@ -25,8 +25,8 @@ class Button: UIButton {
         self.contentEdgeInsets.left = 26
         self.showsTouchWhenHighlighted = true
         
-        self.addBottomBorderWithColor(color: UIColor(red: 10.0/255, green: 129.0/255, blue: 183.0/255, alpha: 0.5), width: 1.0)
-        self.addTopBorderWithColor(color: UIColor(red: 10.0/255, green: 129.0/255, blue: 183.0/255, alpha: 0.5), width: 1.0)
+        self.addBottomBorderWithColor(color: Theme.XMen, width: 1.0)
+        self.addTopBorderWithColor(color: Theme.XMen, width: 1.0)
 
     }
 

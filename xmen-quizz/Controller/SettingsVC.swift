@@ -19,7 +19,7 @@ class SettingsVC: UIViewController {
 
         avatar.layer.cornerRadius = avatar.layer.frame.size.width / 2
         avatar.layer.borderWidth = 10
-        avatar.layer.borderColor = UIColor(red: 10.0/255, green: 129.0/255, blue: 183.0/255, alpha: 1.0).cgColor
+        avatar.layer.borderColor = Theme.XMen.cgColor
         avatar.layer.masksToBounds = true
         
     }

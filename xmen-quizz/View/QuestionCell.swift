@@ -18,6 +18,8 @@ class QuestionCell: UITableViewCell {
         
         optionLbl.backgroundColor = UIColor(red: 10.0/255, green: 129.0/255, blue: 183.0/255, alpha: 1.0)
         optionLbl.layer.cornerRadius = 8
+        self.layer.masksToBounds = false
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

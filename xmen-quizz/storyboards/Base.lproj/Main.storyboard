@@ -150,7 +150,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o0Z-fy-Ms8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="qqj-JB-PGJ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -175,7 +176,7 @@
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4C8-84-okw" customClass="SRCountdownTimer" customModule="xmen_quizz" customModuleProvider="target">
                                             <rect key="frame" x="327" y="8" width="40" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="VxK-0N-eqq"/>
                                                 <constraint firstAttribute="width" constant="40" id="w8K-nA-8ol"/>
@@ -187,7 +188,6 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="wQd-uV-zcw" firstAttribute="top" secondItem="O3B-Nm-f56" secondAttribute="bottom" constant="50" id="AH8-P9-wrt"/>
                                         <constraint firstItem="wQd-uV-zcw" firstAttribute="leading" secondItem="qqj-JB-PGJ" secondAttribute="leading" constant="8" id="MYF-ax-vOu"/>
@@ -216,11 +216,11 @@
                                                                 <constraint firstAttribute="height" constant="50" id="Fll-he-Btm"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="U0B-6c-esA" firstAttribute="top" secondItem="8ff-qw-2Hj" secondAttribute="top" constant="10" id="OOV-w2-M65"/>
                                                         <constraint firstItem="U0B-6c-esA" firstAttribute="leading" secondItem="8ff-qw-2Hj" secondAttribute="leading" constant="16" id="SIk-A1-4pY"/>
@@ -579,9 +579,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-zF-wAV" userLabel="ShadowView" customClass="ShadowView" customModule="xmen_quizz" customModuleProvider="target">
-                                            <rect key="frame" x="24" y="19" width="343" height="180"/>
+                                            <rect key="frame" x="16" y="16" width="348" height="185"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="180" id="3Iv-B2-tOO"/>
+                                                <constraint firstAttribute="height" constant="185" id="3Iv-B2-tOO"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="uOY-0g-kfe"/>
                                             </constraints>
                                         </view>
@@ -595,7 +595,7 @@
                                                         <constraint firstAttribute="height" constant="41" id="gI2-Ce-aea"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty: 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxF-Oc-Knb">
@@ -604,7 +604,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="KVB-Lt-ZA9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -622,13 +622,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="c4R-GF-XB2" secondAttribute="trailing" constant="16" id="4Zf-b0-Rlg"/>
-                                        <constraint firstItem="zEO-zF-wAV" firstAttribute="top" secondItem="yv3-fL-k6L" secondAttribute="topMargin" constant="8" id="7o8-2t-T4u"/>
-                                        <constraint firstItem="zEO-zF-wAV" firstAttribute="trailing" secondItem="yv3-fL-k6L" secondAttribute="trailingMargin" constant="8" id="AH3-HN-xXW"/>
+                                        <constraint firstItem="zEO-zF-wAV" firstAttribute="top" secondItem="yv3-fL-k6L" secondAttribute="topMargin" constant="5" id="7o8-2t-T4u"/>
+                                        <constraint firstItem="zEO-zF-wAV" firstAttribute="trailing" secondItem="yv3-fL-k6L" secondAttribute="trailingMargin" constant="5" id="AH3-HN-xXW"/>
                                         <constraint firstItem="c4R-GF-XB2" firstAttribute="top" secondItem="yv3-fL-k6L" secondAttribute="top" constant="16" id="BEF-gl-vxh"/>
                                         <constraint firstItem="c4R-GF-XB2" firstAttribute="leading" secondItem="yv3-fL-k6L" secondAttribute="leading" constant="16" id="JNb-AV-gUe"/>
                                         <constraint firstAttribute="bottom" secondItem="c4R-GF-XB2" secondAttribute="bottom" constant="16" id="NOg-LD-fHd"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="zEO-zF-wAV" secondAttribute="bottom" constant="8" id="hcm-nL-GZY"/>
-                                        <constraint firstItem="zEO-zF-wAV" firstAttribute="leading" secondItem="yv3-fL-k6L" secondAttribute="leadingMargin" constant="8" id="mZU-65-dJp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zEO-zF-wAV" secondAttribute="bottom" constant="4" id="hcm-nL-GZY"/>
+                                        <constraint firstItem="zEO-zF-wAV" firstAttribute="leading" secondItem="yv3-fL-k6L" secondAttribute="leadingMargin" id="mZU-65-dJp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

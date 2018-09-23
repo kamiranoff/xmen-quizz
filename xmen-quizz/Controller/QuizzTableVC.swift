@@ -91,6 +91,7 @@ extension QuizzTableVC {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "QuizzCell") as? QuizzCell {
             let quizz = QuizzService.instance.getQuizzes()[indexPath.row]
+            cell.selectionStyle = .none
             cell.updateViews(quizz: quizz)
             
             return cell
@@ -105,7 +106,9 @@ extension QuizzTableVC {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let quizz = QuizzService.instance.getQuizzes()[indexPath.row]
-        self.parent?.performSegue(withIdentifier: "QuizzSegue", sender: quizz)
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (timer) in
+            self.parent?.performSegue(withIdentifier: "QuizzSegue", sender: quizz)
+        }
     }
 }
 

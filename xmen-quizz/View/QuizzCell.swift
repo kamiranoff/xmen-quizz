@@ -21,12 +21,22 @@ class QuizzCell: UITableViewCell {
         
         backgroundVIew.backgroundColor = UIColor(red: 10.0/255, green: 129.0/255, blue: 183.0/255, alpha: 1.0)
         backgroundVIew.layer.cornerRadius = 8
-    
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+        self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        
+        UIView.animate(withDuration:0.3,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 2.0,
+                       options: .curveEaseOut,
+                       animations: {
+                       self.transform = CGAffineTransform.identity
+        }, completion: nil)
         // Configure the view for the selected state
     }
 
