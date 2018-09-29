@@ -584,12 +584,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="wd6-OW-RKl" customClass="QuizzTableHeader" customModule="xmen_quizz" customModuleProvider="target">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="wd6-OW-RKl" customClass="QuizzTableHeader" customModule="xmen_quizz" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x-men-logo-quizz-cropped" translatesAutoresizingMaskIntoConstraints="NO" id="dVs-La-Huc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -621,6 +621,10 @@
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4R-GF-XB2" userLabel="BackgroundView">
                                             <rect key="frame" x="16" y="16" width="343" height="180"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQx-Rn-FxK">
+                                                    <rect key="frame" x="0.0" y="8" width="343" height="164"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgD-km-fpF">
                                                     <rect key="frame" x="8" y="8" width="327" height="41"/>
                                                     <constraints>
@@ -651,12 +655,16 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="RgD-km-fpF" secondAttribute="trailing" constant="8" id="127-QB-1MB"/>
                                                 <constraint firstItem="08J-Ry-ZSU" firstAttribute="leading" secondItem="c4R-GF-XB2" secondAttribute="leading" constant="40" id="5vb-jr-5zo"/>
+                                                <constraint firstItem="PQx-Rn-FxK" firstAttribute="top" secondItem="c4R-GF-XB2" secondAttribute="top" constant="8" id="Fga-8t-o8Q"/>
                                                 <constraint firstAttribute="bottom" secondItem="08J-Ry-ZSU" secondAttribute="bottom" constant="8" id="GwS-aV-1yi"/>
                                                 <constraint firstItem="08J-Ry-ZSU" firstAttribute="top" secondItem="c4R-GF-XB2" secondAttribute="top" constant="8" id="KFd-OF-wcD"/>
                                                 <constraint firstAttribute="bottom" secondItem="fxF-Oc-Knb" secondAttribute="bottom" constant="8" id="L0y-ND-dlI"/>
                                                 <constraint firstAttribute="height" constant="180" id="Whv-Lb-Po8"/>
                                                 <constraint firstItem="fxF-Oc-Knb" firstAttribute="leading" secondItem="c4R-GF-XB2" secondAttribute="leading" constant="8" id="Wsw-8b-ufd"/>
+                                                <constraint firstAttribute="bottom" secondItem="PQx-Rn-FxK" secondAttribute="bottom" constant="8" id="c9t-se-tRy"/>
+                                                <constraint firstAttribute="trailing" secondItem="PQx-Rn-FxK" secondAttribute="trailing" id="e0P-bl-VAO"/>
                                                 <constraint firstAttribute="trailing" secondItem="fxF-Oc-Knb" secondAttribute="trailing" constant="8" id="ejt-Ci-Kme"/>
+                                                <constraint firstItem="PQx-Rn-FxK" firstAttribute="leading" secondItem="c4R-GF-XB2" secondAttribute="leading" id="klg-Xy-fGo"/>
                                                 <constraint firstItem="RgD-km-fpF" firstAttribute="top" secondItem="c4R-GF-XB2" secondAttribute="top" constant="8" id="nUD-ag-Yed"/>
                                                 <constraint firstItem="RgD-km-fpF" firstAttribute="leading" secondItem="c4R-GF-XB2" secondAttribute="leading" constant="8" id="wLQ-Cd-Mch"/>
                                             </constraints>
@@ -674,6 +682,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="animationContainerView" destination="PQx-Rn-FxK" id="XkN-KI-0L8"/>
                                     <outlet property="backgroundVIew" destination="c4R-GF-XB2" id="AUR-Fn-IJq"/>
                                     <outlet property="difficultyLbl" destination="fxF-Oc-Knb" id="GXr-Za-ZA7"/>
                                     <outlet property="imageOutlet" destination="08J-Ry-ZSU" id="fDC-5f-ICQ"/>

@@ -29,7 +29,8 @@ class MainViewController: UIViewController  {
                 NSAttributedString.Key.font : UIFont(name: "icons", size: 24)!,
                 ], for: controlState)
         }
-
+        
+     
     }
     
     override func viewDidAppear(_ animated: Bool) {

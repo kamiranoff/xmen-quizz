@@ -17,6 +17,8 @@
 		B95D13EF214E6B67004CBE89 /* QuizzTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D13EE214E6B67004CBE89 /* QuizzTableVC.swift */; };
 		B95D13F1214E760F004CBE89 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D13F0214E760F004CBE89 /* ShadowView.swift */; };
 		B967A5BD2131D782001943C9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A5BC2131D782001943C9 /* TextField.swift */; };
+		B98229E0215FC61400C52AA9 /* deadpool.json in Resources */ = {isa = PBXBuildFile; fileRef = B98229DE215FC61400C52AA9 /* deadpool.json */; };
+		B98229E1215FC61400C52AA9 /* flow.json in Resources */ = {isa = PBXBuildFile; fileRef = B98229DF215FC61400C52AA9 /* flow.json */; };
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
 		B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3E213176B800CF7EF7 /* ErrorService.swift */; };
 		B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A4021317E6900CF7EF7 /* FirestoreService.swift */; };
@@ -57,6 +59,8 @@
 		B95D13EE214E6B67004CBE89 /* QuizzTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzTableVC.swift; sourceTree = "<group>"; };
 		B95D13F0214E760F004CBE89 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		B967A5BC2131D782001943C9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		B98229DE215FC61400C52AA9 /* deadpool.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deadpool.json; sourceTree = "<group>"; };
+		B98229DF215FC61400C52AA9 /* flow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flow.json; sourceTree = "<group>"; };
 		B9875A3B213170D000CF7EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9875A3E213176B800CF7EF7 /* ErrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorService.swift; sourceTree = "<group>"; };
 		B9875A4021317E6900CF7EF7 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -111,6 +115,15 @@
 				D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B98229DD215FC5F300C52AA9 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				B98229DE215FC61400C52AA9 /* deadpool.json */,
+				B98229DF215FC61400C52AA9 /* flow.json */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 		B9875A3A213170B200CF7EF7 /* Utilities */ = {
@@ -209,6 +222,7 @@
 		B9B7EA9D2130B19200C557C0 /* xmen-quizz */ = {
 			isa = PBXGroup;
 			children = (
+				B98229DD215FC5F300C52AA9 /* animations */,
 				B9A6F691215672B60063D05A /* constants */,
 				B9A6F68E215671390063D05A /* libs */,
 				B9C17E442149CD400081088D /* storyboards */,
@@ -305,8 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */,
+				B98229E1215FC61400C52AA9 /* flow.json in Resources */,
 				B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */,
 				B9C767D421453D3100B8BB50 /* icons.ttf in Resources */,
+				B98229E0215FC61400C52AA9 /* deadpool.json in Resources */,
 				B9B7EAA62130B19400C557C0 /* Assets.xcassets in Resources */,
 				B9B7EAA42130B19200C557C0 /* Main.storyboard in Resources */,
 			);
