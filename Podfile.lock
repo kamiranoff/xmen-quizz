@@ -11,12 +11,12 @@ PODS:
   - BoringSSL/Implementation (10.0.5):
     - BoringSSL/Interface (= 10.0.5)
   - BoringSSL/Interface (10.0.5)
-  - FBSDKCoreKit (4.35.0):
+  - FBSDKCoreKit (4.36.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.35.0):
+  - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.35.0):
-    - FBSDKCoreKit (~> 4.35.0)
+  - FBSDKShareKit (4.36.0):
+    - FBSDKCoreKit (~> 4.36.0)
   - Firebase/Auth (5.4.1):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -97,6 +97,7 @@ PODS:
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
   - leveldb-library (1.20)
+  - lottie-ios (2.5.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -106,13 +107,14 @@ PODS:
   - ViewAnimator (2.1.2)
 
 DEPENDENCIES:
-  - FBSDKCoreKit (= 4.35)
-  - FBSDKLoginKit (= 4.35)
-  - FBSDKShareKit (= 4.35)
+  - FBSDKCoreKit (= 4.36)
+  - FBSDKLoginKit (= 4.36)
+  - FBSDKShareKit (= 4.36)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
   - GoogleSignIn (= 4.2.0)
+  - lottie-ios
   - ViewAnimator
 
 SPEC REPOS:
@@ -137,6 +139,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - leveldb-library
+    - lottie-ios
     - nanopb
     - Protobuf
     - ViewAnimator
@@ -144,9 +147,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
-  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
-  FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
-  FBSDKShareKit: 2ddbd7e6432023fff957af62e23a3671b84319f7
+  FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
+  FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
+  FBSDKShareKit: 7090fdd55c39b03941efddb64c83a64ff6b3949f
   Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
@@ -162,10 +165,11 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   ViewAnimator: 20df9a24a076c6ee78b77a4dbf1943808c94954e
 
-PODFILE CHECKSUM: f0bb985416999122f3f9fc681b18074d3baad76c
+PODFILE CHECKSUM: 03326e46d4c51f9616b2c2e25c46a1be3e64efd7
 
 COCOAPODS: 1.6.0.beta.1

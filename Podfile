@@ -10,9 +10,10 @@ target 'xmen-quizz' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn', '4.2.0'
-  pod 'FBSDKCoreKit', '4.35'
-  pod 'FBSDKLoginKit', '4.35'
-  pod 'FBSDKShareKit', '4.35'
+  pod 'FBSDKCoreKit', '4.36'
+  pod 'FBSDKLoginKit', '4.36'
+  pod 'FBSDKShareKit', '4.36'
   pod "ViewAnimator"
+  pod "lottie-ios"
 
 end
