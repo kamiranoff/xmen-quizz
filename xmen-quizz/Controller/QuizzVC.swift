@@ -53,6 +53,14 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
         counter?.start(beginingValue: timerTime)
     }
     
+    func updateUIForRightAnswer() {
+        
+    }
+    
+    func updateUIForWrongAnswer() {
+        
+    }
+    
     func didSelectectAnswer(isRightAnswer:Bool) {
         let difficulty = quizz?.difficulty ?? 1;
         let timeElapsed = counter?.elapsedTime ?? 1;
@@ -62,6 +70,13 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
         
         quizzScore = quizzScore + questionScore.score
         totalScore.text = "Score: \(quizzScore)"
+    
+        if(isRightAnswer) {
+            updateUIForRightAnswer()
+        } else {
+            updateUIForWrongAnswer()
+        }
+       
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             self.counter?.end()
@@ -82,6 +97,8 @@ extension QuizzVC {
             cell.selectionStyle = .none
             let delay = Double(index) * 0.075
             cell.animate(animations: animations,delay: delay)
+            cell.optionLbl.backgroundColor = Theme.XMen
+
             return cell;
         }
         return QuestionCell()
@@ -90,11 +107,16 @@ extension QuizzVC {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         let optionId = quizz.questions[questionIndex].options[index].id;
+        let cell:QuestionCell = tableView.cellForRow(at: indexPath) as! QuestionCell
         
         if(optionId == quizz.questions[questionIndex].answer) {
             didSelectectAnswer(isRightAnswer: true)
+            cell.optionLbl.backgroundColor = UIColor.green
+
         } else {
             didSelectectAnswer(isRightAnswer: false)
+            cell.optionLbl.backgroundColor = Theme.XMen5
+
         }
     }
     
