@@ -21,7 +21,7 @@ private let questions1 = [
 ]
 
 private let quizzes = [
-    Quizz(title: "Quizz 1", difficulty: 1, questions: questions1),
+    Quizz(title: "Quizz 1", difficulty: 1,imageName: "professor-x" , questions: questions1),
     Quizz(title: "Quizz 2", difficulty: 1, questions: questions1),
     Quizz(title: "Quizz 3", difficulty: 1, questions: questions1),
     Quizz(title: "Quizz 4", difficulty: 1, questions: questions1)

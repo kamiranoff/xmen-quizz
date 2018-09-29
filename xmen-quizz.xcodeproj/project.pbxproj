@@ -36,6 +36,9 @@
 		B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */; };
 		B9D8AC6C2149B51F0005B3A8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */; };
 		B9D8AC6E2149BD8D0005B3A8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8AC6D2149BD8D0005B3A8 /* Button.swift */; };
+		B9E7F5A2215E5AE200546EE1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7F5A1215E5AE200546EE1 /* Player.swift */; };
+		B9E7F5A4215E5D6100546EE1 /* QuestionScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7F5A3215E5D6100546EE1 /* QuestionScore.swift */; };
+		B9E7F5A6215E5D7300546EE1 /* QuizzScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7F5A5215E5D7300546EE1 /* QuizzScore.swift */; };
 		D36FEE104B9E3C708A9E0CD3 /* Pods_xmen_quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,9 @@
 		B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVC.swift; sourceTree = "<group>"; };
 		B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B9D8AC6D2149BD8D0005B3A8 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		B9E7F5A1215E5AE200546EE1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = "xmen-quizz/constants/Player.swift"; sourceTree = SOURCE_ROOT; };
+		B9E7F5A3215E5D6100546EE1 /* QuestionScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionScore.swift; path = "xmen-quizz/constants/QuestionScore.swift"; sourceTree = SOURCE_ROOT; };
+		B9E7F5A5215E5D7300546EE1 /* QuizzScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizzScore.swift; path = "xmen-quizz/constants/QuizzScore.swift"; sourceTree = SOURCE_ROOT; };
 		D45D548263F137D0D7CAEF69 /* Pods_xmen_quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xmen_quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +165,9 @@
 			children = (
 				B9C17E472149D3A20081088D /* Quizz.swift */,
 				B9B0860F214ADDD000E90E82 /* Question.swift */,
+				B9E7F5A1215E5AE200546EE1 /* Player.swift */,
+				B9E7F5A3215E5D6100546EE1 /* QuestionScore.swift */,
+				B9E7F5A5215E5D7300546EE1 /* QuizzScore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +337,7 @@
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -347,6 +357,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +411,7 @@
 				B958AD33214EFC31000E285F /* QuizzVC.swift in Sources */,
 				B93761C5214442A400FD0D04 /* AuthVC.swift in Sources */,
 				B95D13EB214D5FB4004CBE89 /* QuizzTableHeader.swift in Sources */,
+				B9E7F5A2215E5AE200546EE1 /* Player.swift in Sources */,
 				B9C17E4A2149D5F70081088D /* QuizzService.swift in Sources */,
 				B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */,
 				B95D13F1214E760F004CBE89 /* ShadowView.swift in Sources */,
@@ -407,7 +419,9 @@
 				B9A6F690215671510063D05A /* SRCountdownTimer.swift in Sources */,
 				B91FBFF9215469EA00B86F38 /* QuestionCell.swift in Sources */,
 				B9A6F693215672C70063D05A /* Theme.swift in Sources */,
+				B9E7F5A6215E5D7300546EE1 /* QuizzScore.swift in Sources */,
 				B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */,
+				B9E7F5A4215E5D6100546EE1 /* QuestionScore.swift in Sources */,
 				B93761CB21444F9A00FD0D04 /* DataService.swift in Sources */,
 				B9C17E482149D3A20081088D /* Quizz.swift in Sources */,
 				B9B7EAA12130B19200C557C0 /* MainViewController.swift in Sources */,

@@ -50,7 +50,7 @@ public class SRCountdownTimer: UIView {
     private var timer: Timer?
     private var beginingValue: Int = 1
     private var totalTime: TimeInterval = 1
-    private var elapsedTime: TimeInterval = 0
+    private (set) var elapsedTime: TimeInterval = 0
     private var interval: TimeInterval = 1 // Interval which is set by a user
     private let fireInterval: TimeInterval = 0.01 // ~60 FPS
     
@@ -185,6 +185,7 @@ public class SRCountdownTimer: UIView {
         
         delegate?.timerDidEnd?()
     }
+    
     
     /**
      * Calculate value in minutes and seconds and return it as String

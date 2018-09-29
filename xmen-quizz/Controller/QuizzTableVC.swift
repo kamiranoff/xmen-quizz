@@ -65,10 +65,8 @@ class QuizzTableVC: UITableViewController {
 
         var headerRect = CGRect(x: 0, y: -effectiveHeight, width: quizzTable.bounds.width, height: tableHeaderViewHeight)
         
-   //     if(quizzTable.contentOffset.y < -effectiveHeight) {
             headerRect.origin.y = quizzTable.contentOffset.y
             headerRect.size.height = -quizzTable.contentOffset.y + (tableHeaderViewCutaway / 2)
-    //    }
         
         headerView.frame = headerRect
         let path = UIBezierPath()
@@ -93,7 +91,7 @@ extension QuizzTableVC {
             let quizz = QuizzService.instance.getQuizzes()[indexPath.row]
             cell.selectionStyle = .none
             cell.updateViews(quizz: quizz)
-            
+            cell.index = indexPath.row
             return cell
         }
         

@@ -10,9 +10,11 @@ import UIKit
 
 class QuizzCell: UITableViewCell {
     
+    var index: Int?
     @IBOutlet weak var backgroundVIew: UIView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var difficultyLbl: UILabel!
+    @IBOutlet weak var imageOutlet: UIImageView!
     
     
     override func awakeFromNib() {
@@ -43,6 +45,12 @@ class QuizzCell: UITableViewCell {
     func updateViews(quizz: Quizz) {
         titleLbl.text = quizz.title
         difficultyLbl.text = "Difficulty: \(quizz.difficulty)"
+        
+        if let imageName = quizz.imageName {
+            imageOutlet.image = UIImage(named: imageName)
+            imageOutlet.contentMode = .scaleAspectFit
+
+        }
     }
     
     

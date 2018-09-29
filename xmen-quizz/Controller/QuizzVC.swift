@@ -14,14 +14,17 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
     @IBOutlet weak var questionTitle: UILabel!
     @IBOutlet weak var quizzTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalScore: UILabel!
+    
     @IBOutlet var counter: SRCountdownTimer? = SRCountdownTimer()
     
     var questionIndex: Int = 0;
-    let timerTime:Int = 2;
+    let timerTime:Int = 15;
+    var quizz:Quizz!
+    var quizzScore:Int = 0;
     
     let animations = [AnimationType.from(direction: .right, offset: 30.0)]
     
-    var quizz:Quizz!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +53,23 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
         counter?.start(beginingValue: timerTime)
     }
     
+    func didSelectectAnswer(isRightAnswer:Bool) {
+        let difficulty = quizz?.difficulty ?? 1;
+        let timeElapsed = counter?.elapsedTime ?? 1;
+        
+        let currentQuestionScore = QuestionScore.setScore(counterTime: timerTime, timeToAnswer: Float(timeElapsed) , quizzDifficulty: difficulty , isRightAnswer: isRightAnswer)
+        let questionScore = QuestionScore(questionId: questionIndex, score: currentQuestionScore)
+        
+        quizzScore = quizzScore + questionScore.score
+        totalScore.text = "Score: \(quizzScore)"
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+            self.counter?.end()
+        }
+    }
+}
+
+extension QuizzVC {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quizz.questions.count
     }
@@ -59,6 +79,7 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
             let index = indexPath.row
             let option = quizz.questions[questionIndex].options[index].option;
             cell.optionLbl.text = option;
+            cell.selectionStyle = .none
             let delay = Double(index) * 0.075
             cell.animate(animations: animations,delay: delay)
             return cell;
@@ -66,22 +87,14 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
         return QuestionCell()
     }
     
-    func didSelectectRightAnswer() {
-        
-    }
-    
-    func didSelectectWrongAnswer() {
-        
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         let optionId = quizz.questions[questionIndex].options[index].id;
         
         if(optionId == quizz.questions[questionIndex].answer) {
-            print("Well Done")
+            didSelectectAnswer(isRightAnswer: true)
         } else {
-            print("Wrong!")
+            didSelectectAnswer(isRightAnswer: false)
         }
     }
     
