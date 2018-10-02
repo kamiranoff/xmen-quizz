@@ -22,6 +22,7 @@
 		B9875A3C213170D000CF7EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3B213170D000CF7EF7 /* Constants.swift */; };
 		B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A3E213176B800CF7EF7 /* ErrorService.swift */; };
 		B9875A4121317E6900CF7EF7 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9875A4021317E6900CF7EF7 /* FirestoreService.swift */; };
+		B9897C012162A59E009AC5AE /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = B9897C002162A59E009AC5AE /* confetti.json */; };
 		B9A6F690215671510063D05A /* SRCountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A6F68F215671510063D05A /* SRCountdownTimer.swift */; };
 		B9A6F693215672C70063D05A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A6F692215672C70063D05A /* Theme.swift */; };
 		B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */; };
@@ -36,6 +37,8 @@
 		B9C17E4A2149D5F70081088D /* QuizzService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C17E492149D5F70081088D /* QuizzService.swift */; };
 		B9C767D421453D3100B8BB50 /* icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9C767D321453D3100B8BB50 /* icons.ttf */; };
 		B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */; };
+		B9CFB3E72163FFA2007D8A66 /* EndOfQuizzVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CFB3E62163FFA2007D8A66 /* EndOfQuizzVC.swift */; };
+		B9D7EB50216353F9000D7DCD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7EB4F216353F9000D7DCD /* UIView.swift */; };
 		B9D8AC6C2149B51F0005B3A8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */; };
 		B9D8AC6E2149BD8D0005B3A8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8AC6D2149BD8D0005B3A8 /* Button.swift */; };
 		B9E7F5A2215E5AE200546EE1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7F5A1215E5AE200546EE1 /* Player.swift */; };
@@ -64,6 +67,7 @@
 		B9875A3B213170D000CF7EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9875A3E213176B800CF7EF7 /* ErrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorService.swift; sourceTree = "<group>"; };
 		B9875A4021317E6900CF7EF7 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		B9897C002162A59E009AC5AE /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		B9A6F68F215671510063D05A /* SRCountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRCountdownTimer.swift; sourceTree = "<group>"; };
 		B9A6F692215672C70063D05A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B9AE0C7A2131DC240062216A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		B9C17E492149D5F70081088D /* QuizzService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzService.swift; sourceTree = "<group>"; };
 		B9C767D321453D3100B8BB50 /* icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.ttf; sourceTree = "<group>"; };
 		B9C767D521454F2F00B8BB50 /* RegisterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVC.swift; sourceTree = "<group>"; };
+		B9CFB3E62163FFA2007D8A66 /* EndOfQuizzVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfQuizzVC.swift; sourceTree = "<group>"; };
+		B9D7EB4F216353F9000D7DCD /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B9D8AC6D2149BD8D0005B3A8 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B9E7F5A1215E5AE200546EE1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = "xmen-quizz/constants/Player.swift"; sourceTree = SOURCE_ROOT; };
@@ -120,6 +126,7 @@
 		B98229DD215FC5F300C52AA9 /* animations */ = {
 			isa = PBXGroup;
 			children = (
+				B9897C002162A59E009AC5AE /* confetti.json */,
 				B98229DE215FC61400C52AA9 /* deadpool.json */,
 				B98229DF215FC61400C52AA9 /* flow.json */,
 			);
@@ -155,6 +162,7 @@
 				B95D13EA214D5FB4004CBE89 /* QuizzTableHeader.swift */,
 				B95D13F0214E760F004CBE89 /* ShadowView.swift */,
 				B91FBFF8215469EA00B86F38 /* QuestionCell.swift */,
+				B9D7EB4F216353F9000D7DCD /* UIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 				B9D8AC6B2149B51F0005B3A8 /* SettingsVC.swift */,
 				B95D13EE214E6B67004CBE89 /* QuizzTableVC.swift */,
 				B958AD32214EFC31000E285F /* QuizzVC.swift */,
+				B9CFB3E62163FFA2007D8A66 /* EndOfQuizzVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B7EAA92130B19400C557C0 /* LaunchScreen.storyboard in Resources */,
+				B9897C012162A59E009AC5AE /* confetti.json in Resources */,
 				B98229E1215FC61400C52AA9 /* flow.json in Resources */,
 				B9AE0C7B2131DC240062216A /* GoogleService-Info.plist in Resources */,
 				B9C767D421453D3100B8BB50 /* icons.ttf in Resources */,
@@ -444,10 +454,12 @@
 				B9D8AC6C2149B51F0005B3A8 /* SettingsVC.swift in Sources */,
 				B9C767D621454F2F00B8BB50 /* RegisterUserVC.swift in Sources */,
 				B93761C72144442B00FD0D04 /* LoginVC.swift in Sources */,
+				B9CFB3E72163FFA2007D8A66 /* EndOfQuizzVC.swift in Sources */,
 				B93761C9214445F700FD0D04 /* AuthService.swift in Sources */,
 				B95D13EF214E6B67004CBE89 /* QuizzTableVC.swift in Sources */,
 				B9C17E462149CEFD0081088D /* QuizzCell.swift in Sources */,
 				B967A5BD2131D782001943C9 /* TextField.swift in Sources */,
+				B9D7EB50216353F9000D7DCD /* UIView.swift in Sources */,
 				B9875A3F213176B800CF7EF7 /* ErrorService.swift in Sources */,
 				B9D8AC6E2149BD8D0005B3A8 /* Button.swift in Sources */,
 				B9B7EA9F2130B19200C557C0 /* AppDelegate.swift in Sources */,

@@ -15,4 +15,5 @@ struct Theme {
     static let XMen4 = UIColor(red: 240/255, green: 207/255, blue: 60/255, alpha: 1.0)
     static let XMen5 = UIColor(red: 212/255, green: 58/255, blue: 59/255, alpha: 1.0)
     static let XMen6 = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1.0)
+    static let XMen7 = UIColor(red: 104/255, green: 185/255, blue: 88/255, alpha: 1.0)
 }

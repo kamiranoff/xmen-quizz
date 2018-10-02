@@ -8,6 +8,7 @@
 
 import UIKit
 import ViewAnimator
+import Lottie
 
 class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRCountdownTimerDelegate {
     
@@ -43,25 +44,54 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
         if(questionIndex < quizz.questions.count - 1) {
             questionIndex = questionIndex + 1
             updateQuizzContent(index: questionIndex)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewController(withIdentifier: "EndOfQuizz") as! EndOfQuizzVC
+            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            self.navigationController?.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            present(destinationViewController, animated: true, completion: nil)
+
         }
     }
     
     func updateQuizzContent(index:Int) {
         tableView.reloadData()
+        tableView.isUserInteractionEnabled = true;
         quizzTitle.text = quizz.title
         questionTitle.text = quizz.questions[index].question
         counter?.start(beginingValue: timerTime)
     }
     
-    func updateUIForRightAnswer() {
+    func updateUIForRightAnswer(cell: QuestionCell, questionScore: Int) {
+        cell.optionLbl.backgroundColor = Theme.XMen7
+        let animationView = LOTAnimationView(name: "confetti")
+        let scoreUpdateView = UILabel(frame: CGRect(x: 120, y: 8, width: 50, height: 30))
+        scoreUpdateView.text = "+\(questionScore)"
+        scoreUpdateView.textColor = Theme.XMen4
+        scoreUpdateView.alpha = 0
+        UIView.animate(withDuration: 0.3) {
+            scoreUpdateView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+        }
+      
+    
+        scoreUpdateView.fadeIn(completion: {
+            (finished: Bool) -> Void in
+            scoreUpdateView.fadeOut()
+        })
+        self.view.addSubview(scoreUpdateView)
+        self.view.addSubview(animationView)
+        animationView.isUserInteractionEnabled = false
+        animationView.play{ (finished) in
+            animationView.removeFromSuperview()
+        }
+    }
+    
+    func updateUIForWrongAnswer(cell: QuestionCell, questionScore: Int) {
+        cell.optionLbl.backgroundColor = Theme.XMen5
         
     }
     
-    func updateUIForWrongAnswer() {
-        
-    }
-    
-    func didSelectectAnswer(isRightAnswer:Bool) {
+    func didSelectectAnswer(isRightAnswer:Bool, cell: QuestionCell) {
         let difficulty = quizz?.difficulty ?? 1;
         let timeElapsed = counter?.elapsedTime ?? 1;
         
@@ -70,13 +100,13 @@ class QuizzVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SRC
         
         quizzScore = quizzScore + questionScore.score
         totalScore.text = "Score: \(quizzScore)"
-    
+        
         if(isRightAnswer) {
-            updateUIForRightAnswer()
+            updateUIForRightAnswer(cell: cell, questionScore: questionScore.score)
         } else {
-            updateUIForWrongAnswer()
+            updateUIForWrongAnswer(cell: cell, questionScore: questionScore.score)
         }
-       
+        
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             self.counter?.end()
@@ -98,7 +128,7 @@ extension QuizzVC {
             let delay = Double(index) * 0.075
             cell.animate(animations: animations,delay: delay)
             cell.optionLbl.backgroundColor = Theme.XMen
-
+            
             return cell;
         }
         return QuestionCell()
@@ -108,15 +138,13 @@ extension QuizzVC {
         let index = indexPath.row
         let optionId = quizz.questions[questionIndex].options[index].id;
         let cell:QuestionCell = tableView.cellForRow(at: indexPath) as! QuestionCell
-        
+        tableView.isUserInteractionEnabled = false;
+
         if(optionId == quizz.questions[questionIndex].answer) {
-            didSelectectAnswer(isRightAnswer: true)
-            cell.optionLbl.backgroundColor = UIColor.green
-
+            self.didSelectectAnswer(isRightAnswer: true, cell: cell)
+            
         } else {
-            didSelectectAnswer(isRightAnswer: false)
-            cell.optionLbl.backgroundColor = Theme.XMen5
-
+            didSelectectAnswer(isRightAnswer: false, cell: cell)
         }
     }
     
