@@ -10,6 +10,9 @@ import UIKit
 
 class EndOfQuizzVC: UIViewController {
 
+    @IBOutlet weak var BackToHomeBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +29,12 @@ class EndOfQuizzVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func onPressedBackToButton(_ sender: Any) {
+        let navigationController = self.presentingViewController as? UINavigationController
 
+        self.dismiss(animated: true) {
+            let _ = navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
 }
